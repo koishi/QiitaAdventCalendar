@@ -17,6 +17,8 @@
 		4377057A1C2EBA6900E32781 /* AdventCalendarItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437705791C2EBA6900E32781 /* AdventCalendarItemEntity.swift */; };
 		4377057C1C2EBD8400E32781 /* CategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377057B1C2EBD8400E32781 /* CategoryManager.swift */; };
 		4377058C1C2EC07700E32781 /* CategoryManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377058B1C2EC07700E32781 /* CategoryManagerTests.swift */; };
+		4377058E1C2ED26900E32781 /* AdventCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377058D1C2ED26900E32781 /* AdventCalendarManager.swift */; };
+		437705921C2EDC3100E32781 /* AdventCalendarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437705911C2EDC3100E32781 /* AdventCalendarManagerTests.swift */; };
 		661898533B540A1E76C9BAF0 /* Pods_QiitaAdventCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D090C8D7C27D9EA9B4592CE /* Pods_QiitaAdventCalendar.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		437705811C2EC03600E32781 /* QiitaAdventCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiitaAdventCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		437705851C2EC03600E32781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4377058B1C2EC07700E32781 /* CategoryManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryManagerTests.swift; sourceTree = "<group>"; };
+		4377058D1C2ED26900E32781 /* AdventCalendarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdventCalendarManager.swift; path = Classes/Models/AdventCalendarManager.swift; sourceTree = "<group>"; };
+		437705911C2EDC3100E32781 /* AdventCalendarManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventCalendarManagerTests.swift; sourceTree = "<group>"; };
 		6020B45FC55183EE8B406840 /* Pods-QiitaAdventCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaAdventCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-QiitaAdventCalendar/Pods-QiitaAdventCalendar.release.xcconfig"; sourceTree = "<group>"; };
 		6D090C8D7C27D9EA9B4592CE /* Pods_QiitaAdventCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaAdventCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,6 +131,7 @@
 			children = (
 				437705721C2EB4D300E32781 /* Entities */,
 				4377057B1C2EBD8400E32781 /* CategoryManager.swift */,
+				4377058D1C2ED26900E32781 /* AdventCalendarManager.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 			children = (
 				437705851C2EC03600E32781 /* Info.plist */,
 				4377058B1C2EC07700E32781 /* CategoryManagerTests.swift */,
+				437705911C2EDC3100E32781 /* AdventCalendarManagerTests.swift */,
 			);
 			path = QiitaAdventCalendarTests;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4354B1551C2EB0D800A6E1C2 /* ViewController.swift in Sources */,
+				4377058E1C2ED26900E32781 /* AdventCalendarManager.swift in Sources */,
 				4377057A1C2EBA6900E32781 /* AdventCalendarItemEntity.swift in Sources */,
 				437705761C2EB5F700E32781 /* CategoryEntity.swift in Sources */,
 				437705781C2EB68E00E32781 /* AdventCalendarEntity.swift in Sources */,
@@ -337,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437705921C2EDC3100E32781 /* AdventCalendarManagerTests.swift in Sources */,
 				4377058C1C2EC07700E32781 /* CategoryManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +540,7 @@
 				4377058A1C2EC03600E32781 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

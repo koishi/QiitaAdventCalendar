@@ -9,6 +9,7 @@
 import Foundation
 
 class AdventCalendarEntity: NSObject {
-  var calendarTitle = ""
+  var title = ""
   var url = ""
+  var items = [AdventCalendarItemEntity]()
 }

@@ -11,4 +11,5 @@ import Foundation
 class CategoryEntity: NSObject {
   var title = ""
   var url = ""
+  var calendars = [AdventCalendarEntity]()
 }

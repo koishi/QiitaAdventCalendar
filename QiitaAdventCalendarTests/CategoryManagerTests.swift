@@ -13,23 +13,21 @@ class CategoryManagerTests: XCTestCase {
   
   override func setUp() {
     super.setUp()
-    // Put setup code here. This method is called before the invocation of each test method in the class.
   }
   
   override func tearDown() {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     super.tearDown()
   }
-
+  
   func testScrapingCategories() {
-    let expectation = expectationWithDescription("asynchronous request")
-
+    let expectation = expectationWithDescription("scrapingCategories request")
+    
     CategoryManager.sharedInstance.scrapingCategories({
-      print(CategoryManager.sharedInstance.Categories)
+      print(CategoryManager.sharedInstance.categories)
       expectation.fulfill()
     })
-    XCTAssertEqual(CategoryManager.sharedInstance.Categories.count, 14)
-    waitForExpectationsWithTimeout(10.0, handler:nil)
+    waitForExpectationsWithTimeout(30.0, handler:nil)
+    XCTAssertEqual(CategoryManager.sharedInstance.categories.count, 14)
   }
 
 }
