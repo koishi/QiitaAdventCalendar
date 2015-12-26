@@ -13,6 +13,11 @@ class AdventCalendarManager: NSObject {
 
   static func scrapingCalendars(category: CategoryEntity, completion:() -> Void) {
 
+    if category.calendars.count > 0 {
+      completion()
+      return
+    }
+
     let jiDoc = Ji(htmlURL: NSURL(string: "http://qiita.com/" + category.url)!)
     if let bodyNode = jiDoc?.xPath("//body")!.first {
 
@@ -28,7 +33,6 @@ class AdventCalendarManager: NSObject {
         }
         category.calendars.append(calendar)
       }
-
       completion()
     }
   }
