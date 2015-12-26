@@ -1,0 +1,34 @@
+# hidden/temp files
+.DS_Store
+*.swp
+*~.nib
+
+# Build dir
+build/
+
+# Xcode project files except for the project file
+**/*.xcodeproj/*
+!**/*.xcodeproj/project.pbxproj
+!**/*.xcodeproj/default.*
+
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+
+# Windows image thumbnail file
+Thumbs.db
+
+# User-specific project settings
+*.mode1v3
+*.mode2v3
+
+# idea
+.idea/
+
+#CocoaPod
+Pods/*
+Podfile.lock
+
+# Xcode Workspace
+*.xcworkspace/*
+!*.xcworkspace/contents.xcworkspacedata
+xcuserdata
