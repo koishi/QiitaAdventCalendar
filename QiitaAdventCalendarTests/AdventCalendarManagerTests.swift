@@ -24,7 +24,7 @@ class AdventCalendarManagerTests: XCTestCase {
 
     let category = CategoryEntity()
     category.url = "advent-calendar/2015/categories/to_be_decided"
-    AdventCalendarManager.sharedInstance.scrapingCalendars(category, completion: {
+    AdventCalendarManager.scrapingCalendars(category, completion: {
       expectation.fulfill()
     })
     waitForExpectationsWithTimeout(30.0, handler:nil)
@@ -37,7 +37,7 @@ class AdventCalendarManagerTests: XCTestCase {
     
     let category = CategoryEntity()
     category.url = "advent-calendar/2015/categories/company"
-    AdventCalendarManager.sharedInstance.scrapingCalendars(category, completion: {
+    AdventCalendarManager.scrapingCalendars(category, completion: {
       expectation.fulfill()
     })
     waitForExpectationsWithTimeout(30.0, handler:nil)

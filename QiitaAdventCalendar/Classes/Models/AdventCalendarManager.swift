@@ -11,9 +11,7 @@ import Ji
 
 class AdventCalendarManager: NSObject {
 
-  static let sharedInstance = AdventCalendarManager()
-
-  func scrapingCalendars(category: CategoryEntity, completion:() -> Void) {
+  static func scrapingCalendars(category: CategoryEntity, completion:() -> Void) {
 
     let jiDoc = Ji(htmlURL: NSURL(string: "http://qiita.com/" + category.url)!)
     if let bodyNode = jiDoc?.xPath("//body")!.first {

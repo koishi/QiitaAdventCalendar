@@ -19,6 +19,8 @@
 		4377058C1C2EC07700E32781 /* CategoryManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377058B1C2EC07700E32781 /* CategoryManagerTests.swift */; };
 		4377058E1C2ED26900E32781 /* AdventCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377058D1C2ED26900E32781 /* AdventCalendarManager.swift */; };
 		437705921C2EDC3100E32781 /* AdventCalendarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437705911C2EDC3100E32781 /* AdventCalendarManagerTests.swift */; };
+		437705941C2EEC3000E32781 /* AdventCalendarItemEntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437705931C2EEC3000E32781 /* AdventCalendarItemEntityManager.swift */; };
+		437705961C2EECF300E32781 /* AdventCalendarItemEntityManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437705951C2EECF300E32781 /* AdventCalendarItemEntityManagerTests.swift */; };
 		661898533B540A1E76C9BAF0 /* Pods_QiitaAdventCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D090C8D7C27D9EA9B4592CE /* Pods_QiitaAdventCalendar.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		4377058B1C2EC07700E32781 /* CategoryManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryManagerTests.swift; sourceTree = "<group>"; };
 		4377058D1C2ED26900E32781 /* AdventCalendarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdventCalendarManager.swift; path = Classes/Models/AdventCalendarManager.swift; sourceTree = "<group>"; };
 		437705911C2EDC3100E32781 /* AdventCalendarManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventCalendarManagerTests.swift; sourceTree = "<group>"; };
+		437705931C2EEC3000E32781 /* AdventCalendarItemEntityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdventCalendarItemEntityManager.swift; path = Classes/Models/AdventCalendarItemEntityManager.swift; sourceTree = "<group>"; };
+		437705951C2EECF300E32781 /* AdventCalendarItemEntityManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventCalendarItemEntityManagerTests.swift; sourceTree = "<group>"; };
 		6020B45FC55183EE8B406840 /* Pods-QiitaAdventCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaAdventCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-QiitaAdventCalendar/Pods-QiitaAdventCalendar.release.xcconfig"; sourceTree = "<group>"; };
 		6D090C8D7C27D9EA9B4592CE /* Pods_QiitaAdventCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaAdventCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -132,6 +136,7 @@
 				437705721C2EB4D300E32781 /* Entities */,
 				4377057B1C2EBD8400E32781 /* CategoryManager.swift */,
 				4377058D1C2ED26900E32781 /* AdventCalendarManager.swift */,
+				437705931C2EEC3000E32781 /* AdventCalendarItemEntityManager.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				437705851C2EC03600E32781 /* Info.plist */,
 				4377058B1C2EC07700E32781 /* CategoryManagerTests.swift */,
 				437705911C2EDC3100E32781 /* AdventCalendarManagerTests.swift */,
+				437705951C2EECF300E32781 /* AdventCalendarItemEntityManagerTests.swift */,
 			);
 			path = QiitaAdventCalendarTests;
 			sourceTree = "<group>";
@@ -333,6 +339,7 @@
 				4354B1551C2EB0D800A6E1C2 /* ViewController.swift in Sources */,
 				4377058E1C2ED26900E32781 /* AdventCalendarManager.swift in Sources */,
 				4377057A1C2EBA6900E32781 /* AdventCalendarItemEntity.swift in Sources */,
+				437705941C2EEC3000E32781 /* AdventCalendarItemEntityManager.swift in Sources */,
 				437705761C2EB5F700E32781 /* CategoryEntity.swift in Sources */,
 				437705781C2EB68E00E32781 /* AdventCalendarEntity.swift in Sources */,
 				4354B1531C2EB0D800A6E1C2 /* AppDelegate.swift in Sources */,
@@ -346,6 +353,7 @@
 			files = (
 				437705921C2EDC3100E32781 /* AdventCalendarManagerTests.swift in Sources */,
 				4377058C1C2EC07700E32781 /* CategoryManagerTests.swift in Sources */,
+				437705961C2EECF300E32781 /* AdventCalendarItemEntityManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
