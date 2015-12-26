@@ -15,8 +15,20 @@
 		437705761C2EB5F700E32781 /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437705751C2EB5F700E32781 /* CategoryEntity.swift */; };
 		437705781C2EB68E00E32781 /* AdventCalendarEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437705771C2EB68E00E32781 /* AdventCalendarEntity.swift */; };
 		4377057A1C2EBA6900E32781 /* AdventCalendarItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437705791C2EBA6900E32781 /* AdventCalendarItemEntity.swift */; };
+		4377057C1C2EBD8400E32781 /* CategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377057B1C2EBD8400E32781 /* CategoryManager.swift */; };
+		4377058C1C2EC07700E32781 /* CategoryManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377058B1C2EC07700E32781 /* CategoryManagerTests.swift */; };
 		661898533B540A1E76C9BAF0 /* Pods_QiitaAdventCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D090C8D7C27D9EA9B4592CE /* Pods_QiitaAdventCalendar.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		437705861C2EC03600E32781 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4354B1471C2EB0D800A6E1C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4354B14E1C2EB0D800A6E1C2;
+			remoteInfo = QiitaAdventCalendar;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1362181DA43F7A1979E986A6 /* Pods-QiitaAdventCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaAdventCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QiitaAdventCalendar/Pods-QiitaAdventCalendar.debug.xcconfig"; sourceTree = "<group>"; };
@@ -30,6 +42,10 @@
 		437705751C2EB5F700E32781 /* CategoryEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryEntity.swift; path = Classes/Models/Entities/CategoryEntity.swift; sourceTree = "<group>"; };
 		437705771C2EB68E00E32781 /* AdventCalendarEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdventCalendarEntity.swift; path = Classes/Models/Entities/AdventCalendarEntity.swift; sourceTree = "<group>"; };
 		437705791C2EBA6900E32781 /* AdventCalendarItemEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdventCalendarItemEntity.swift; path = Classes/Models/Entities/AdventCalendarItemEntity.swift; sourceTree = "<group>"; };
+		4377057B1C2EBD8400E32781 /* CategoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryManager.swift; path = Classes/Models/CategoryManager.swift; sourceTree = "<group>"; };
+		437705811C2EC03600E32781 /* QiitaAdventCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiitaAdventCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		437705851C2EC03600E32781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4377058B1C2EC07700E32781 /* CategoryManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryManagerTests.swift; sourceTree = "<group>"; };
 		6020B45FC55183EE8B406840 /* Pods-QiitaAdventCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaAdventCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-QiitaAdventCalendar/Pods-QiitaAdventCalendar.release.xcconfig"; sourceTree = "<group>"; };
 		6D090C8D7C27D9EA9B4592CE /* Pods_QiitaAdventCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaAdventCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -40,6 +56,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				661898533B540A1E76C9BAF0 /* Pods_QiitaAdventCalendar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4377057E1C2EC03600E32781 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				4354B1511C2EB0D800A6E1C2 /* QiitaAdventCalendar */,
+				437705821C2EC03600E32781 /* QiitaAdventCalendarTests */,
 				4354B1501C2EB0D800A6E1C2 /* Products */,
 				2B932FCC9294F079D346F74A /* Pods */,
 				F838398B7B8035D2F10F30C0 /* Frameworks */,
@@ -69,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				4354B14F1C2EB0D800A6E1C2 /* QiitaAdventCalendar.app */,
+				437705811C2EC03600E32781 /* QiitaAdventCalendarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				437705721C2EB4D300E32781 /* Entities */,
+				4377057B1C2EBD8400E32781 /* CategoryManager.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -127,6 +153,15 @@
 				437705791C2EBA6900E32781 /* AdventCalendarItemEntity.swift */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		437705821C2EC03600E32781 /* QiitaAdventCalendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				437705851C2EC03600E32781 /* Info.plist */,
+				4377058B1C2EC07700E32781 /* CategoryManagerTests.swift */,
+			);
+			path = QiitaAdventCalendarTests;
 			sourceTree = "<group>";
 		};
 		F838398B7B8035D2F10F30C0 /* Frameworks */ = {
@@ -160,6 +195,24 @@
 			productReference = 4354B14F1C2EB0D800A6E1C2 /* QiitaAdventCalendar.app */;
 			productType = "com.apple.product-type.application";
 		};
+		437705801C2EC03600E32781 /* QiitaAdventCalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 437705881C2EC03600E32781 /* Build configuration list for PBXNativeTarget "QiitaAdventCalendarTests" */;
+			buildPhases = (
+				4377057D1C2EC03600E32781 /* Sources */,
+				4377057E1C2EC03600E32781 /* Frameworks */,
+				4377057F1C2EC03600E32781 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				437705871C2EC03600E32781 /* PBXTargetDependency */,
+			);
+			name = QiitaAdventCalendarTests;
+			productName = QiitaAdventCalendarTests;
+			productReference = 437705811C2EC03600E32781 /* QiitaAdventCalendarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,6 +225,10 @@
 				TargetAttributes = {
 					4354B14E1C2EB0D800A6E1C2 = {
 						CreatedOnToolsVersion = 7.2;
+					};
+					437705801C2EC03600E32781 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 4354B14E1C2EB0D800A6E1C2;
 					};
 				};
 			};
@@ -189,6 +246,7 @@
 			projectRoot = "";
 			targets = (
 				4354B14E1C2EB0D800A6E1C2 /* QiitaAdventCalendar */,
+				437705801C2EC03600E32781 /* QiitaAdventCalendarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -201,6 +259,13 @@
 				4354B15D1C2EB0D800A6E1C2 /* LaunchScreen.storyboard in Resources */,
 				4354B15A1C2EB0D800A6E1C2 /* Assets.xcassets in Resources */,
 				4354B1581C2EB0D800A6E1C2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4377057F1C2EC03600E32781 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,10 +329,27 @@
 				437705761C2EB5F700E32781 /* CategoryEntity.swift in Sources */,
 				437705781C2EB68E00E32781 /* AdventCalendarEntity.swift in Sources */,
 				4354B1531C2EB0D800A6E1C2 /* AppDelegate.swift in Sources */,
+				4377057C1C2EBD8400E32781 /* CategoryManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4377057D1C2EC03600E32781 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4377058C1C2EC07700E32781 /* CategoryManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		437705871C2EC03600E32781 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4354B14E1C2EB0D800A6E1C2 /* QiitaAdventCalendar */;
+			targetProxy = 437705861C2EC03600E32781 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4354B1561C2EB0D800A6E1C2 /* Main.storyboard */ = {
@@ -396,6 +478,32 @@
 			};
 			name = Release;
 		};
+		437705891C2EC03600E32781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QiitaAdventCalendarTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.jugem.meg.QiitaAdventCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiitaAdventCalendar.app/QiitaAdventCalendar";
+			};
+			name = Debug;
+		};
+		4377058A1C2EC03600E32781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QiitaAdventCalendarTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.jugem.meg.QiitaAdventCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiitaAdventCalendar.app/QiitaAdventCalendar";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -416,6 +524,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		437705881C2EC03600E32781 /* Build configuration list for PBXNativeTarget "QiitaAdventCalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				437705891C2EC03600E32781 /* Debug */,
+				4377058A1C2EC03600E32781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
