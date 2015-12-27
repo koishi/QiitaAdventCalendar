@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430551301C2FE88300F4B065 /* EntryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305512E1C2FE88300F4B065 /* EntryListTableViewCell.swift */; };
+		430551311C2FE88300F4B065 /* EntryListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4305512F1C2FE88300F4B065 /* EntryListTableViewCell.xib */; };
 		4354B1531C2EB0D800A6E1C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354B1521C2EB0D800A6E1C2 /* AppDelegate.swift */; };
 		4354B1581C2EB0D800A6E1C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4354B1561C2EB0D800A6E1C2 /* Main.storyboard */; };
 		4354B15A1C2EB0D800A6E1C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4354B1591C2EB0D800A6E1C2 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		1362181DA43F7A1979E986A6 /* Pods-QiitaAdventCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaAdventCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QiitaAdventCalendar/Pods-QiitaAdventCalendar.debug.xcconfig"; sourceTree = "<group>"; };
+		4305512E1C2FE88300F4B065 /* EntryListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListTableViewCell.swift; path = Classes/Views/EntryListTableViewCell.swift; sourceTree = "<group>"; };
+		4305512F1C2FE88300F4B065 /* EntryListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EntryListTableViewCell.xib; path = Classes/Views/EntryListTableViewCell.xib; sourceTree = "<group>"; };
 		4354B14F1C2EB0D800A6E1C2 /* QiitaAdventCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaAdventCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4354B1521C2EB0D800A6E1C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4354B1571C2EB0D800A6E1C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 			children = (
 				4354B1561C2EB0D800A6E1C2 /* Main.storyboard */,
 				4354B15B1C2EB0D800A6E1C2 /* LaunchScreen.storyboard */,
+				4305512E1C2FE88300F4B065 /* EntryListTableViewCell.swift */,
+				4305512F1C2FE88300F4B065 /* EntryListTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -283,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430551311C2FE88300F4B065 /* EntryListTableViewCell.xib in Resources */,
 				4354B15D1C2EB0D800A6E1C2 /* LaunchScreen.storyboard in Resources */,
 				4354B15A1C2EB0D800A6E1C2 /* Assets.xcassets in Resources */,
 				4354B1581C2EB0D800A6E1C2 /* Main.storyboard in Resources */,
@@ -357,6 +364,7 @@
 				437705941C2EEC3000E32781 /* EntryManager.swift in Sources */,
 				4377059E1C2F14E200E32781 /* AdventCalendarWebViewController.swift in Sources */,
 				437705761C2EB5F700E32781 /* CategoryEntity.swift in Sources */,
+				430551301C2FE88300F4B065 /* EntryListTableViewCell.swift in Sources */,
 				437705A21C2F961600E32781 /* YearManager.swift in Sources */,
 				437705781C2EB68E00E32781 /* CalendarEntity.swift in Sources */,
 				4354B1531C2EB0D800A6E1C2 /* AppDelegate.swift in Sources */,

@@ -13,7 +13,8 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
   @IBOutlet weak var tableView: UITableView!
   
   private let cellIdentifier = "Cell"
-  
+  private let entryCellIdentifier = "EntryListTableViewCell"
+
   var calendar: CalendarEntity!
   
   override func viewDidLoad() {
@@ -21,6 +22,9 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
     tableView.delegate = self
     tableView.dataSource = self
     tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+  
+    let nib = UINib(nibName: entryCellIdentifier, bundle: nil)
+    tableView.registerNib(nib, forCellReuseIdentifier: entryCellIdentifier)
   
     navigationItem.title = calendar.title
     
@@ -36,16 +40,23 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
   // MARK: - UITableViewDataSource
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)!
+    let cell = tableView.dequeueReusableCellWithIdentifier(entryCellIdentifier) as! EntryListTableViewCell
     let item = calendar.items[indexPath.row]
-    cell.textLabel?.text = "\(item.date) \(item.entryTitle)"
+    cell.date.text = item.date
+    cell.title.text = item.entryTitle
+    cell.name.text = item.authorName
+    cell.icon.sd_setImageWithURL(NSURL(string: item.authorIconURL))
     return cell
   }
-  
+
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return calendar.items.count
   }
-  
+
+  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return 62.0
+  }
+
   // MARK: - UITableDelegate
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
