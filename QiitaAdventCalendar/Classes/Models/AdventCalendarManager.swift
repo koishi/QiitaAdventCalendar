@@ -21,7 +21,7 @@ class AdventCalendarManager: NSObject {
     let jiDoc = Ji(htmlURL: NSURL(string: "http://qiita.com/" + category.url)!)
     if let bodyNode = jiDoc?.xPath("//body")!.first {
 
-      let contentDivNode = bodyNode.xPath("div[@id='main']/div[@class='container']/div[@class='adventCalendarList']/table[@class='table adventCalendarList']/tbody/tr")
+      let contentDivNode = bodyNode.xPath(category.xPath())
       for childNode in contentDivNode {
         let calendar = AdventCalendarEntity()
         let spanNode = childNode.firstChildWithName("td")?.childrenWithName("a")

@@ -45,4 +45,60 @@ class AdventCalendarManagerTests: XCTestCase {
     XCTAssertEqual(category.calendars.count, 78)
   }
 
+  func testScrapingCalendars_2014() {
+    let expectation = expectationWithDescription("scrapingCalendars request 2014")
+    
+    let category = CategoryEntity()
+    category.url = "advent-calendar/2014"
+    category.year = .EarlyYear
+    AdventCalendarManager.scrapingCalendars(category, completion: {
+      expectation.fulfill()
+    })
+    waitForExpectationsWithTimeout(30.0, handler:nil)
+    print(category.calendars)
+    XCTAssertEqual(category.calendars.count, 214)
+  }
+
+  func testScrapingCalendars_2013() {
+    let expectation = expectationWithDescription("scrapingCalendars request 2013")
+    
+    let category = CategoryEntity()
+    category.url = "advent-calendar/2013"
+    category.year = .EarlyYear
+    AdventCalendarManager.scrapingCalendars(category, completion: {
+      expectation.fulfill()
+    })
+    waitForExpectationsWithTimeout(30.0, handler:nil)
+    print(category.calendars)
+    XCTAssertEqual(category.calendars.count, 82)
+  }
+  
+  func testScrapingCalendars_2012() {
+    let expectation = expectationWithDescription("scrapingCalendars request 2012")
+    
+    let category = CategoryEntity()
+    category.url = "advent-calendar/2012"
+    category.year = .EarlyYear
+    AdventCalendarManager.scrapingCalendars(category, completion: {
+      expectation.fulfill()
+    })
+    waitForExpectationsWithTimeout(30.0, handler:nil)
+    print(category.calendars)
+    XCTAssertEqual(category.calendars.count, 29)
+  }
+
+  func testScrapingCalendars_2011() {
+    let expectation = expectationWithDescription("scrapingCalendars request 2011")
+    
+    let category = CategoryEntity()
+    category.url = "advent-calendar/2011"
+    category.year = .EarlyYear
+    AdventCalendarManager.scrapingCalendars(category, completion: {
+      expectation.fulfill()
+    })
+    waitForExpectationsWithTimeout(30.0, handler:nil)
+    print(category.calendars)
+    XCTAssertEqual(category.calendars.count, 1)
+  }
+
 }

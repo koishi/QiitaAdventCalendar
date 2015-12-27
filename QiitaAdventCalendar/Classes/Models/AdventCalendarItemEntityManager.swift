@@ -6,7 +6,7 @@
 //  Copyright © 2015年 bs. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Ji
 
 class AdventCalendarItemEntityManager: NSObject {
