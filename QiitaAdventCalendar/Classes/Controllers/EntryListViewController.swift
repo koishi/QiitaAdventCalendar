@@ -1,5 +1,5 @@
 //
-//  AdventCalendarItemViewController.swift
+//  EntryListViewController.swift
 //  QiitaAdventCalendar
 //
 //  Created by bs on 2015/12/27.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class AdventCalendarItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EntryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
   @IBOutlet weak var tableView: UITableView!
   
   private let cellIdentifier = "Cell"
   
-  var calendar: AdventCalendarEntity!
+  var calendar: CalendarEntity!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -24,7 +24,7 @@ class AdventCalendarItemViewController: UIViewController, UITableViewDelegate, U
   
     navigationItem.title = calendar.title
     
-    AdventCalendarItemEntityManager.scrapingCalendarItems(calendar, completion: {
+    EntryManager.scrapingCalendarItems(calendar, completion: {
       self.tableView.reloadData()
     })
   }
@@ -55,7 +55,7 @@ class AdventCalendarItemViewController: UIViewController, UITableViewDelegate, U
       return
     }
 
-    let vc = self.storyboard?.instantiateViewControllerWithIdentifier("AdventCalendarWebViewController") as! AdventCalendarWebViewController
+    let vc = self.storyboard?.instantiateViewControllerWithIdentifier("EntryWebViewController") as! EntryWebViewController
     vc.item = calendar.items[indexPath.row]
     self.navigationController?.pushViewController(vc, animated: true)
   }

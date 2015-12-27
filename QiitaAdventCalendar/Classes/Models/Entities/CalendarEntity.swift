@@ -1,5 +1,5 @@
 //
-//  AdventCalendarEntity.swift
+//  CalendarEntity.swift
 //  QiitaAdventCalendar
 //
 //  Created by bs on 2015/12/26.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-class AdventCalendarEntity: NSObject {
+class CalendarEntity: NSObject {
   var title = ""
   var url = ""
-  var items = [AdventCalendarItemEntity]()
+  var items = [EntryEntity]()
 }

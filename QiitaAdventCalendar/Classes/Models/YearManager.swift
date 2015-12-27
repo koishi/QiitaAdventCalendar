@@ -25,7 +25,7 @@ class YearManager: NSObject {
       category.url = "advent-calendar/" + year
       category.year = .EarlyYear
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      let vc = storyboard.instantiateViewControllerWithIdentifier("AdventCalendarViewController") as! AdventCalendarViewController
+      let vc = storyboard.instantiateViewControllerWithIdentifier("CalendarViewController") as! CalendarViewController
       vc.category = category
       return vc
     }

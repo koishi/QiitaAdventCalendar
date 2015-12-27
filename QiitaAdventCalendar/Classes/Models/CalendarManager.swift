@@ -1,5 +1,5 @@
 //
-//  AdventCalendarManager.swift
+//  CalendarManager.swift
 //  QiitaAdventCalendar
 //
 //  Created by bs on 2015/12/26.
@@ -9,7 +9,7 @@
 import Foundation
 import Ji
 
-class AdventCalendarManager: NSObject {
+class CalendarManager: NSObject {
 
   static func scrapingCalendars(category: CategoryEntity, completion:() -> Void) {
 
@@ -23,7 +23,7 @@ class AdventCalendarManager: NSObject {
 
       let contentDivNode = bodyNode.xPath(category.xPath())
       for childNode in contentDivNode {
-        let calendar = AdventCalendarEntity()
+        let calendar = CalendarEntity()
         let spanNode = childNode.firstChildWithName("td")?.childrenWithName("a")
         if let title = spanNode?.first?.content {
           calendar.title = title

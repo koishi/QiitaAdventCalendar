@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="1024" y="1412"/>
         </scene>
-        <!--Advent Calendar View Controller-->
+        <!--Calendar View Controller-->
         <scene sceneID="Wnk-mM-YfE">
             <objects>
-                <viewController storyboardIdentifier="AdventCalendarViewController" id="hNR-Bl-Itm" customClass="AdventCalendarViewController" customModule="QiitaAdventCalendar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarViewController" id="hNR-Bl-Itm" customClass="CalendarViewController" customModule="QiitaAdventCalendar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2MT-ok-qeq"/>
                         <viewControllerLayoutGuide type="bottom" id="9gd-Ue-JC3"/>
@@ -123,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="1704" y="709"/>
         </scene>
-        <!--Advent Calendar Item View Controller-->
+        <!--Entry List View Controller-->
         <scene sceneID="xd2-In-BwL">
             <objects>
-                <viewController storyboardIdentifier="AdventCalendarItemViewController" id="hxl-ct-1lq" customClass="AdventCalendarItemViewController" customModule="QiitaAdventCalendar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EntryListViewController" id="hxl-ct-1lq" customClass="EntryListViewController" customModule="QiitaAdventCalendar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jKc-dc-bty"/>
                         <viewControllerLayoutGuide type="bottom" id="O2b-sz-tvu"/>
@@ -156,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="2354" y="709"/>
         </scene>
-        <!--Advent Calendar Web View Controller-->
+        <!--Entry Web View Controller-->
         <scene sceneID="57g-L7-7Ea">
             <objects>
-                <viewController storyboardIdentifier="AdventCalendarWebViewController" id="2k2-WH-loi" customClass="AdventCalendarWebViewController" customModule="QiitaAdventCalendar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EntryWebViewController" id="2k2-WH-loi" customClass="EntryWebViewController" customModule="QiitaAdventCalendar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v4W-SM-s8X"/>
                         <viewControllerLayoutGuide type="bottom" id="vVX-KJ-hsA"/>

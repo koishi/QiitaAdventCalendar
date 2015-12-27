@@ -11,7 +11,7 @@ import Foundation
 class CategoryEntity: NSObject {
   var title = ""
   var url = ""
-  var calendars = [AdventCalendarEntity]()
+  var calendars = [CalendarEntity]()
   var year: Year = .LateYear
 
   enum Year: Int {

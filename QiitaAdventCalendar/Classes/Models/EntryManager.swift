@@ -1,5 +1,5 @@
 //
-//  AdventCalendarItemEntityManager.swift
+//  EntryManager.swift
 //  QiitaAdventCalendar
 //
 //  Created by bs on 2015/12/27.
@@ -9,9 +9,9 @@
 import Foundation
 import Ji
 
-class AdventCalendarItemEntityManager: NSObject {
+class EntryManager: NSObject {
   
-  static func scrapingCalendarItems(calendar: AdventCalendarEntity, completion:() -> Void) {
+  static func scrapingCalendarItems(calendar: CalendarEntity, completion:() -> Void) {
     
     if calendar.items.count > 0 {
       completion()
@@ -25,7 +25,7 @@ class AdventCalendarItemEntityManager: NSObject {
       
       for childNode in contentDivNode {
         
-        let item = AdventCalendarItemEntity()
+        let item = EntryEntity()
         
         let spanNode = childNode.childrenWithName("div")
         for node in spanNode {

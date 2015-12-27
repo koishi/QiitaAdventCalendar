@@ -1,5 +1,5 @@
 //
-//  AdventCalendarWebViewController.swift
+//  EntryWebViewController.swift
 //  QiitaAdventCalendar
 //
 //  Created by bs on 2015/12/27.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class AdventCalendarWebViewController: UIViewController {
+class EntryWebViewController: UIViewController {
   
   @IBOutlet weak var webView: UIWebView!
 
-  var item: AdventCalendarItemEntity!
+  var item: EntryEntity!
 
   override func viewDidLoad() {
     super.viewDidLoad()

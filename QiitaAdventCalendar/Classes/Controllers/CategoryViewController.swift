@@ -46,7 +46,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
   // MARK: - UITableDelegate
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    let vc = self.storyboard?.instantiateViewControllerWithIdentifier("AdventCalendarViewController") as! AdventCalendarViewController
+    let vc = self.storyboard?.instantiateViewControllerWithIdentifier("CalendarViewController") as! CalendarViewController
     vc.category = CategoryManager.sharedInstance.categories[indexPath.row]
     self.navigationController?.pushViewController(vc, animated: true)
   }

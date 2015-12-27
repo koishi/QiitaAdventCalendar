@@ -1,5 +1,5 @@
 //
-//  AdventCalendarViewController.swift
+//  CalendarViewController.swift
 //  QiitaAdventCalendar
 //
 //  Created by bs on 2015/12/27.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AdventCalendarViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CalendarViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
   @IBOutlet weak var tableView: UITableView!
 
@@ -25,7 +25,7 @@ class AdventCalendarViewController: UIViewController, UITableViewDelegate, UITab
     navigationItem.title = category.title
     
     // カテゴリ内のアドベントカレンダーの読込
-    AdventCalendarManager.scrapingCalendars(category, completion: {
+    CalendarManager.scrapingCalendars(category, completion: {
       self.tableView.reloadData()
     })
   }
@@ -53,7 +53,7 @@ class AdventCalendarViewController: UIViewController, UITableViewDelegate, UITab
   // MARK: - UITableDelegate
 
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    let vc = self.storyboard?.instantiateViewControllerWithIdentifier("AdventCalendarItemViewController") as! AdventCalendarItemViewController
+    let vc = self.storyboard?.instantiateViewControllerWithIdentifier("EntryListViewController") as! EntryListViewController
     vc.calendar = category.calendars[indexPath.row]
     self.navigationController?.pushViewController(vc, animated: true)
   }
