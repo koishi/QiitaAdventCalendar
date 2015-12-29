@@ -55,7 +55,9 @@ class EntryManager: NSObject {
             break
           }
         }
-        calendar.items.append(item)
+        if item.entryTitle != "" {
+          calendar.items.append(item)
+        }
       }
       completion()
     }

@@ -23,6 +23,9 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
     tableView.dataSource = self
     tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
   
+    
+    tableView.rowHeight = UITableViewAutomaticDimension
+    
     let nib = UINib(nibName: entryCellIdentifier, bundle: nil)
     tableView.registerNib(nib, forCellReuseIdentifier: entryCellIdentifier)
   
@@ -42,7 +45,9 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier(entryCellIdentifier) as! EntryListTableViewCell
     let item = calendar.items[indexPath.row]
-    cell.date.text = item.date
+
+    let date: NSString = item.date
+    cell.date.text = date.stringByReplacingOccurrencesOfString("12 / ", withString: "")
     cell.title.text = item.entryTitle
     cell.name.text = item.authorName
     cell.icon.sd_setImageWithURL(NSURL(string: item.authorIconURL))
@@ -51,10 +56,6 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
 
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return calendar.items.count
-  }
-
-  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    return 62.0
   }
 
   // MARK: - UITableDelegate
@@ -71,4 +72,11 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
     self.navigationController?.pushViewController(vc, animated: true)
   }
 
+  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return UITableViewAutomaticDimension
+  }
+  
+  func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return UITableViewAutomaticDimension
+  }
 }
