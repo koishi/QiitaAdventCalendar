@@ -19,8 +19,9 @@ class YearSelectViewController: UIViewController, UITableViewDelegate, UITableVi
     tableView.delegate = self
     tableView.dataSource = self
     tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+    navigationItem.title = "Qiita Advent Calendar"
   }
-  
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
@@ -40,15 +41,6 @@ class YearSelectViewController: UIViewController, UITableViewDelegate, UITableVi
   // MARK: - UITableDelegate
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    
-    //    if calendar.items[indexPath.row].entryURL == "" {
-    //      tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    //      return
-    //    }
-    //
-    //    let vc = self.storyboard?.instantiateViewControllerWithIdentifier("AdventCalendarWebViewController") as! AdventCalendarWebViewController
-    //    vc.item = calendar.items[indexPath.row]
-
     let vc = YearManager.rootViewController(YearManager.years[indexPath.row])
     self.navigationController?.pushViewController(vc, animated: true)
   }
