@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YearSelectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class YearSelectViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
@@ -25,9 +25,11 @@ class YearSelectViewController: UIViewController, UITableViewDelegate, UITableVi
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
-  
-  // MARK: - UITableViewDataSource
-  
+
+}
+
+extension YearSelectViewController: UITableViewDataSource {
+
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)!
     cell.textLabel?.text = YearManager.years[indexPath.row]
@@ -37,9 +39,11 @@ class YearSelectViewController: UIViewController, UITableViewDelegate, UITableVi
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return YearManager.years.count
   }
-  
-  // MARK: - UITableDelegate
-  
+
+}
+
+extension YearSelectViewController: UITableViewDelegate {
+
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let vc = YearManager.rootViewController(YearManager.years[indexPath.row])
     self.navigationController?.pushViewController(vc, animated: true)

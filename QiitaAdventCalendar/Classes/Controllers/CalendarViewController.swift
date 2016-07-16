@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalendarViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CalendarViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
 
@@ -34,7 +34,9 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     super.didReceiveMemoryWarning()
   }
 
-  // MARK: - UITableViewDataSource
+}
+
+extension CalendarViewController: UITableViewDataSource {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)!
@@ -50,11 +52,14 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     return count
   }
   
-  // MARK: - UITableDelegate
+}
 
+extension CalendarViewController: UITableViewDelegate {
+  
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    let vc = self.storyboard?.instantiateViewControllerWithIdentifier("EntryListViewController") as! EntryListViewController
+    let vc = self.storyboard?.instantiateViewControllerWithIdentifier(String(EntryListViewController)) as! EntryListViewController
     vc.calendar = category.calendars[indexPath.row]
     self.navigationController?.pushViewController(vc, animated: true)
   }
+
 }

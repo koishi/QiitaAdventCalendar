@@ -10,6 +10,8 @@ import UIKit
 import SDWebImage
 
 class EntryListTableViewCell: UITableViewCell {
+
+  static let cellIdentifier = String(EntryListTableViewCell)
   
   @IBOutlet weak var date: UILabel!
   @IBOutlet weak var title: UILabel!

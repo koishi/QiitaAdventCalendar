@@ -17,7 +17,7 @@ class YearManager: NSObject {
     switch year {
     case "2015":
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      let vc = storyboard.instantiateViewControllerWithIdentifier("CategoryViewController") as! CategoryViewController
+      let vc = storyboard.instantiateViewControllerWithIdentifier(String(CategoryViewController)) as! CategoryViewController
       return vc
     default:
       let category = CategoryEntity()
@@ -25,7 +25,7 @@ class YearManager: NSObject {
       category.url = "advent-calendar/" + year
       category.year = .EarlyYear
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      let vc = storyboard.instantiateViewControllerWithIdentifier("CalendarViewController") as! CalendarViewController
+      let vc = storyboard.instantiateViewControllerWithIdentifier(String(CalendarViewController)) as! CalendarViewController
       vc.category = category
       return vc
     }
