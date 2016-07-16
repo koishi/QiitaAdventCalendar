@@ -14,11 +14,15 @@ class CategoryViewController: UIViewController {
 
   private let cellIdentifier = "Cell"
 
+  var year: String?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.delegate = self
     tableView.dataSource = self
     tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+
+    navigationItem.title = year
 
     CategoryManager.sharedInstance.scrapingCategories({
       self.tableView.reloadData()

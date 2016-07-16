@@ -14,8 +14,10 @@ class CategoryEntity: NSObject {
   var calendars = [CalendarEntity]()
   var year: Year = .LateYear
 
-  enum Year: Int {
+  enum Year {
+    // 2015年
     case LateYear
+    // 2014年以前
     case EarlyYear
   }
 
