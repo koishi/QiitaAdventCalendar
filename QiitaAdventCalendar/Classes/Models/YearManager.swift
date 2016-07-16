@@ -23,10 +23,7 @@ class YearManager: NSObject {
       vc.year = year
       return vc
     default:
-      let category = CategoryEntity()
-      category.title = year
-      category.url = "advent-calendar/" + year
-      category.year = .EarlyYear
+      let category = CategoryEntity(title: year, url: "advent-calendar/" + year, year: .EarlyYear)
       let storyboard = UIStoryboard(name: mainStoryboard, bundle: nil)
       let vc = storyboard.instantiateViewControllerWithIdentifier(String(CalendarViewController)) as! CalendarViewController
       vc.category = category

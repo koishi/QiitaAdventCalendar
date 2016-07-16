@@ -21,6 +21,13 @@ class CategoryEntity: NSObject {
     case EarlyYear
   }
 
+  convenience init(title: String, url: String, year: Year) {
+    self.init()
+    self.title = title
+    self.url = url
+    self.year = year
+  }
+
   func xPath() -> String {
     switch year {
     case .LateYear:
