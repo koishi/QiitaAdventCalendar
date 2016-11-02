@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class EntryListViewController: UIViewController {
   
@@ -62,10 +63,17 @@ extension EntryListViewController: UITableViewDelegate {
       tableView.deselectRowAtIndexPath(indexPath, animated: true)
       return
     }
-    
-    let vc = self.storyboard?.instantiateViewControllerWithIdentifier(String(EntryWebViewController)) as! EntryWebViewController
-    vc.item = calendar.items[indexPath.row]
-    self.navigationController?.pushViewController(vc, animated: true)
+
+    if #available(iOS 9.0, *) {
+      if let url = NSURL.init(string: calendar.items[indexPath.row].entryURL) {
+        let safariView = SFSafariViewController.init(URL: url)
+        self.presentViewController(safariView, animated: true, completion: nil)
+      }
+    } else {
+      let vc = self.storyboard?.instantiateViewControllerWithIdentifier(String(EntryWebViewController)) as! EntryWebViewController
+      vc.item = calendar.items[indexPath.row]
+      self.navigationController?.pushViewController(vc, animated: true)
+    }
   }
   
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

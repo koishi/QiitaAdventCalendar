@@ -28,7 +28,7 @@
 		4377059E1C2F14E200E32781 /* AdventCalendarWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377059D1C2F14E200E32781 /* AdventCalendarWebViewController.swift */; };
 		437705A01C2F927C00E32781 /* YearSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377059F1C2F927C00E32781 /* YearSelectViewController.swift */; };
 		437705A21C2F961600E32781 /* YearManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437705A11C2F961600E32781 /* YearManager.swift */; };
-		661898533B540A1E76C9BAF0 /* Pods_QiitaAdventCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D090C8D7C27D9EA9B4592CE /* Pods_QiitaAdventCalendar.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		661898533B540A1E76C9BAF0 /* Pods_QiitaAdventCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D090C8D7C27D9EA9B4592CE /* Pods_QiitaAdventCalendar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -258,9 +258,12 @@
 				TargetAttributes = {
 					4354B14E1C2EB0D800A6E1C2 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 234G69CT2G;
+						LastSwiftMigration = 0800;
 					};
 					437705801C2EC03600E32781 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4354B14E1C2EB0D800A6E1C2;
 					};
 				};
@@ -503,10 +506,12 @@
 			baseConfigurationReference = 1362181DA43F7A1979E986A6 /* Pods-QiitaAdventCalendar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 234G69CT2G;
 				INFOPLIST_FILE = QiitaAdventCalendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.jugem.meg.QiitaAdventCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -515,10 +520,12 @@
 			baseConfigurationReference = 6020B45FC55183EE8B406840 /* Pods-QiitaAdventCalendar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 234G69CT2G;
 				INFOPLIST_FILE = QiitaAdventCalendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.jugem.meg.QiitaAdventCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -531,6 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.jugem.meg.QiitaAdventCalendarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiitaAdventCalendar.app/QiitaAdventCalendar";
 			};
 			name = Debug;
@@ -544,6 +552,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.jugem.meg.QiitaAdventCalendarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiitaAdventCalendar.app/QiitaAdventCalendar";
 			};
 			name = Release;
