@@ -43,7 +43,13 @@ extension EntryListViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCellWithIdentifier(EntryListTableViewCell.cellIdentifier) as! EntryListTableViewCell
     let item = calendar.items[indexPath.row]
     cell.date.text = item.date.stringByReplacingOccurrencesOfString("12 / ", withString: "")
-    cell.title.text = item.entryTitle
+
+    if item.entryTitle.isEmpty {
+      cell.title.text = item.comment
+    } else {
+      cell.title.text = item.entryTitle
+    }
+
     cell.name.text = item.authorName
     cell.icon.sd_setImageWithURL(NSURL(string: item.authorIconURL))
     return cell

@@ -51,13 +51,15 @@ class EntryManager: NSObject {
             if let url = node.firstChildWithName("a")?.attributes["href"] {
               item.entryURL = url
             }
+          case "adventCalendarItem_comment":
+            if let content = node.content {
+              item.comment = content
+            }
           default:
             break
           }
         }
-        if item.entryTitle != "" {
-          calendar.items.append(item)
-        }
+        calendar.items.append(item)
       }
       completion()
     }

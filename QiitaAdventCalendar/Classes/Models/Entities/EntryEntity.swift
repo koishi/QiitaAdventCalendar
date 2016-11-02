@@ -15,4 +15,5 @@ class EntryEntity: NSObject {
   var authorIconURL = ""
   var entryTitle = ""
   var entryURL = ""
+  var comment = ""
 }

@@ -21,7 +21,7 @@ class CalendarManager: NSObject {
     let jiDoc = Ji(htmlURL: NSURL(string: "http://qiita.com/" + category.url)!)
     if let bodyNode = jiDoc?.xPath("//body")!.first {
 
-      let contentDivNode = bodyNode.xPath(category.xPath())
+      let contentDivNode = bodyNode.xPath(category.year.xPath())
       for childNode in contentDivNode {
         let calendar = CalendarEntity()
         let spanNode = childNode.firstChildWithName("td")?.childrenWithName("a")

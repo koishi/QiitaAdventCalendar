@@ -11,18 +11,10 @@ import Ji
 
 class CategoryManager: NSObject {
 
-  var categories = [CategoryEntity]()
+  static func scrapingCategories(year:String, completion:(categories: [CategoryEntity]) -> Void) {
 
-  static let sharedInstance = CategoryManager()
-
-  func scrapingCategories(completion:() -> Void) {
-    
-    if categories.count > 0 {
-      completion()
-      return
-    }
-
-    let jiDoc = Ji(htmlURL: NSURL(string: "http://qiita.com/advent-calendar/2015/categories")!)
+    var categories = [CategoryEntity]()
+    let jiDoc = Ji(htmlURL: NSURL(string: "http://qiita.com/advent-calendar/\(year)/categories")!)
     if let bodyNode = jiDoc?.xPath("//body")!.first {
       let contentDivNode = bodyNode.xPath("div[@id='main']/div[@class='container adventCalendarBody']/div[@class='row']/div[@class='col-lg-3 col-md-4 col-sm-6']/div[@class='adventCalendarCard']")
       for childNode in contentDivNode {
@@ -37,6 +29,6 @@ class CategoryManager: NSObject {
         categories.append(category)
       }
     }
-    completion()
+    completion(categories: categories)
   }
 }
