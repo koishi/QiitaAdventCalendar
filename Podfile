@@ -4,6 +4,6 @@
 use_frameworks!
 
 target 'QiitaAdventCalendar' do
-  pod 'Ji', '~> 1.2.0'
+  pod 'Ji'
   pod 'SDWebImage'
 end
