@@ -12,13 +12,13 @@ class YearSelectViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
-  private let cellIdentifier = "Cell"
+  fileprivate let cellIdentifier = "Cell"
   
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.delegate = self
     tableView.dataSource = self
-    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     navigationItem.title = "Qiita Advent Calendar"
   }
 
@@ -30,13 +30,13 @@ class YearSelectViewController: UIViewController {
 
 extension YearSelectViewController: UITableViewDataSource {
 
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)!
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
     cell.textLabel?.text = YearManager.years[indexPath.row]
     return cell
   }
   
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return YearManager.years.count
   }
 
@@ -44,7 +44,7 @@ extension YearSelectViewController: UITableViewDataSource {
 
 extension YearSelectViewController: UITableViewDelegate {
 
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let vc = YearManager.rootViewController(YearManager.years[indexPath.row])
     self.navigationController?.pushViewController(vc, animated: true)
   }

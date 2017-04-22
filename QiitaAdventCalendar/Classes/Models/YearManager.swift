@@ -15,17 +15,17 @@ class YearManager: NSObject {
 
   static let mainStoryboard = "Main"
   
-  static func rootViewController(year: String) -> UIViewController {
+  static func rootViewController(_ year: String) -> UIViewController {
     switch Int(year)! {
     case 2011...2014:
-      let category = CategoryEntity(title: year, url: "advent-calendar/" + year, year: .EarlyYear)
+      let category = CategoryEntity(title: year, url: "advent-calendar/" + year, year: .earlyYear)
       let storyboard = UIStoryboard(name: mainStoryboard, bundle: nil)
-      let vc = storyboard.instantiateViewControllerWithIdentifier(String(CalendarViewController)) as! CalendarViewController
+      let vc = storyboard.instantiateViewController(withIdentifier: String(describing: CalendarViewController.self)) as! CalendarViewController
       vc.category = category
       return vc
     default:
       let storyboard = UIStoryboard(name: mainStoryboard, bundle: nil)
-      let vc = storyboard.instantiateViewControllerWithIdentifier(String(CategoryViewController)) as! CategoryViewController
+      let vc = storyboard.instantiateViewController(withIdentifier: String(describing: CategoryViewController.self)) as! CategoryViewController
       vc.year = year
       return vc
     }

@@ -19,8 +19,8 @@ class EntryWebViewController: UIViewController {
 
     navigationItem.title = item.entryTitle
     
-    let url = NSURL(string: item.entryURL)!
-    webView.loadRequest(NSURLRequest(URL: url))
+    let url = URL(string: item.entryURL)!
+    webView.loadRequest(URLRequest(url: url))
   }
   
   override func didReceiveMemoryWarning() {

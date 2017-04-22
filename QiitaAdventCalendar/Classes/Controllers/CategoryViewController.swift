@@ -12,7 +12,7 @@ class CategoryViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
 
-  private let cellIdentifier = "Cell"
+  fileprivate let cellIdentifier = "Cell"
 
   var year: String?
   
@@ -22,7 +22,7 @@ class CategoryViewController: UIViewController {
     super.viewDidLoad()
     tableView.delegate = self
     tableView.dataSource = self
-    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     navigationItem.title = year
 
     guard self.categories.count == 0 else {
@@ -45,15 +45,15 @@ class CategoryViewController: UIViewController {
 
 extension CategoryViewController: UITableViewDataSource {
 
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)!
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
 
     let category = self.categories[indexPath.row]
     cell.textLabel?.text = category.title
     return cell
   }
 
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return self.categories.count
   }
 
@@ -63,8 +63,8 @@ extension CategoryViewController: UITableViewDataSource {
 
 extension CategoryViewController: UITableViewDelegate {
 
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    let vc = self.storyboard?.instantiateViewControllerWithIdentifier(String(CalendarViewController)) as! CalendarViewController
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: CalendarViewController.self)) as! CalendarViewController
     vc.category = self.categories[indexPath.row]
     self.navigationController?.pushViewController(vc, animated: true)
   }

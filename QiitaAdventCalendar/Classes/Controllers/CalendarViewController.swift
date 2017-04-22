@@ -12,7 +12,7 @@ class CalendarViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
 
-  private let cellIdentifier = "Cell"
+  fileprivate let cellIdentifier = "Cell"
 
   var category: CategoryEntity!
 
@@ -20,7 +20,7 @@ class CalendarViewController: UIViewController {
     super.viewDidLoad()
     tableView.delegate = self
     tableView.dataSource = self
-    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     
     navigationItem.title = category.title
     
@@ -38,14 +38,14 @@ class CalendarViewController: UIViewController {
 
 extension CalendarViewController: UITableViewDataSource {
   
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)!
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
     let calender = category.calendars[indexPath.row]
     cell.textLabel?.text = calender.title
     return cell
   }
 
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     guard let count = category?.calendars.count else {
       return 0
     }
@@ -56,8 +56,8 @@ extension CalendarViewController: UITableViewDataSource {
 
 extension CalendarViewController: UITableViewDelegate {
   
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    let vc = self.storyboard?.instantiateViewControllerWithIdentifier(String(EntryListViewController)) as! EntryListViewController
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: EntryListViewController.self)) as! EntryListViewController
     vc.calendar = category.calendars[indexPath.row]
     self.navigationController?.pushViewController(vc, animated: true)
   }

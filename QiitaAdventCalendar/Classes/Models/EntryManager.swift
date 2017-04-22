@@ -11,14 +11,14 @@ import Ji
 
 class EntryManager: NSObject {
   
-  static func scrapingCalendarItems(calendar: CalendarEntity, completion:() -> Void) {
+  static func scrapingCalendarItems(_ calendar: CalendarEntity, completion:() -> Void) {
     
     if calendar.items.count > 0 {
       completion()
       return
     }
     
-    let jiDoc = Ji(htmlURL: NSURL(string: "http://qiita.com/" + calendar.url)!)
+    let jiDoc = Ji(htmlURL: URL(string: "http://qiita.com/" + calendar.url)!)
     if let bodyNode = jiDoc?.xPath("//body")!.first {
       
       let contentDivNode = bodyNode.xPath("div[@id='main']/div[@class='adventCalendarSection']/div[@class='container']/div[@class='col-xm-12']/div[@class='adventCalendarItem']")

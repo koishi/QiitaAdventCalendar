@@ -11,14 +11,14 @@ import Ji
 
 class CalendarManager: NSObject {
 
-  static func scrapingCalendars(category: CategoryEntity, completion:() -> Void) {
+  static func scrapingCalendars(_ category: CategoryEntity, completion:() -> Void) {
 
     if category.calendars.count > 0 {
       completion()
       return
     }
 
-    let jiDoc = Ji(htmlURL: NSURL(string: "http://qiita.com/" + category.url)!)
+    let jiDoc = Ji(htmlURL: URL(string: "http://qiita.com/" + category.url)!)
     if let bodyNode = jiDoc?.xPath("//body")!.first {
 
       let contentDivNode = bodyNode.xPath(category.year.xPath())

@@ -12,19 +12,19 @@ class CategoryEntity: NSObject {
   var title = ""
   var url = ""
   var calendars = [CalendarEntity]()
-  var year: Year = .LateYear
+  var year: Year = .lateYear
 
   enum Year {
     // 2015年以降
-    case LateYear
+    case lateYear
     // 2014年以前
-    case EarlyYear
+    case earlyYear
     
     func xPath() -> String {
       switch self {
-      case .LateYear:
+      case .lateYear:
         return "div[@id='main']/div[@class='container']/div[@class='adventCalendarList']/table[@class='table adventCalendarList']/tbody/tr"
-      case .EarlyYear:
+      case .earlyYear:
         return "div[@id='main']/div[@class='container adventCalendarBody']/div[@class='row']/table[@class='table adventCalendarList']/tbody/tr"
       }
     }

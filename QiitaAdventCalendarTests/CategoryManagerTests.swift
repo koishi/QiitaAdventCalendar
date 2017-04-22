@@ -20,13 +20,13 @@ class CategoryManagerTests: XCTestCase {
   }
   
   func testScrapingCategories() {
-    let expectation = expectationWithDescription("scrapingCategories request")
+    let expectation = self.expectation(description: "scrapingCategories request")
     
     CategoryManager.sharedInstance.scrapingCategories({
       print(CategoryManager.sharedInstance.categories)
       expectation.fulfill()
     })
-    waitForExpectationsWithTimeout(30.0, handler:nil)
+    waitForExpectations(timeout: 30.0, handler:nil)
     XCTAssertEqual(CategoryManager.sharedInstance.categories.count, 14)
   }
 

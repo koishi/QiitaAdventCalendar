@@ -20,7 +20,7 @@ class EntryManagerTests: XCTestCase {
   }
   
   func testScrapingCalendarItems() {
-    let expectation = expectationWithDescription("testScrapingCalendarItems request ios-2")
+    let expectation = self.expectation(description: "testScrapingCalendarItems request ios-2")
     
     let calendar = CalendarEntity()
     calendar.url = "advent-calendar/2015/ios-2"
@@ -28,7 +28,7 @@ class EntryManagerTests: XCTestCase {
     EntryManager.scrapingCalendarItems(calendar, completion: {
       expectation.fulfill()
     })
-    waitForExpectationsWithTimeout(30.0, handler:nil)
+    waitForExpectations(timeout: 30.0, handler:nil)
     XCTAssertEqual(calendar.items.count, 25)
   }
   
