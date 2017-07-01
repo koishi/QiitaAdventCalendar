@@ -9,11 +9,11 @@
 import Foundation
 
 class EntryEntity: NSObject {
-  var date = ""
-  var authorName = ""
-  var authorURL = ""
-  var authorIconURL = ""
-  var entryTitle = ""
-  var entryURL = ""
-  var comment = ""
+    var date = ""
+    var authorName = ""
+    var authorURL = ""
+    var authorIconURL = ""
+    var entryTitle = ""
+    var entryURL = ""
+    var comment = ""
 }
