@@ -73,15 +73,9 @@ extension EntryListViewController: UITableViewDelegate {
             return
         }
         
-        if #available(iOS 9.0, *) {
-            if let url = URL.init(string: calendar.items[indexPath.row].entryURL) {
-                let safariView = SFSafariViewController.init(url: url)
-                self.present(safariView, animated: true, completion: nil)
-            }
-        } else {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: EntryWebViewController.self)) as! EntryWebViewController
-            vc.item = calendar.items[indexPath.row]
-            self.navigationController?.pushViewController(vc, animated: true)
+        if let url = URL.init(string: calendar.items[indexPath.row].entryURL) {
+            let safariView = SFSafariViewController(url: url)
+            self.present(safariView, animated: true, completion: nil)
         }
     }
     
