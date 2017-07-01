@@ -26,9 +26,11 @@ class EntryListViewController: UIViewController {
         
         navigationItem.title = calendar.title
         
-        EntryManager.scrapingCalendarItems(calendar, completion: {
-            self.tableView.reloadData()
-        })
+        EntryManager.scrapingCalendarItems(calendar) {
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -65,8 +67,9 @@ extension EntryListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         if calendar.items[indexPath.row].entryURL.isEmpty {
-            tableView.deselectRow(at: indexPath, animated: true)
             return
         }
         
