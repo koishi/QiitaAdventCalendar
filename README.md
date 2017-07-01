@@ -6,7 +6,7 @@ http://qiita.com/advent-calendar/
 
 ## Installation
 
-$ git clone<br>
+$ git clone https://github.com/koishi/QiitaAdventCalendar<br>
 $ bundle install<br>
 $ bundle exec pod install
 
