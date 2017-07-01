@@ -70,6 +70,8 @@ extension CategoryViewController: UITableViewDelegate {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: CalendarViewController.self)) as! CalendarViewController
         vc.category = self.categories[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
+
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
