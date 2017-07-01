@@ -6,12 +6,13 @@ http://qiita.com/advent-calendar/
 
 ## Installation
 
-$ git clone<BR>
-$ pod install
+$ git clone<br>
+$ bundle install<br>
+$ bundle exec pod install
 
 ## Usage
 
-Run iOS Simulator or iOS Devices<BR>iOS 8.0 and Later
+Run iOS Simulator or iOS Devices<BR>iOS 9.0 and Later
 
 
 ## Credits
