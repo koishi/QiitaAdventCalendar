@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+import Kingfisher
 
 class EntryListViewController: UIViewController {
     
@@ -53,7 +54,7 @@ extension EntryListViewController: UITableViewDataSource {
         }
         
         cell.name.text = item.authorName
-        cell.icon.sd_setImage(with: URL(string: item.authorIconURL))
+        cell.icon.kf.setImage(with: URL(string: item.authorIconURL))
         return cell
     }
     
