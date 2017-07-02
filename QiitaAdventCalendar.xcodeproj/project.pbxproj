@@ -153,10 +153,10 @@
 			isa = PBXGroup;
 			children = (
 				437705721C2EB4D300E32781 /* Entities */,
+				437705A11C2F961600E32781 /* YearFetcher.swift */,
 				4377057B1C2EBD8400E32781 /* CategoryFetcher.swift */,
 				4377058D1C2ED26900E32781 /* CalendarFetcher.swift */,
 				437705931C2EEC3000E32781 /* EntryFetcher.swift */,
-				437705A11C2F961600E32781 /* YearFetcher.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";

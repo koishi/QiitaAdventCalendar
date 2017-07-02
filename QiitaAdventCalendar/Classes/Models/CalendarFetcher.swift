@@ -18,6 +18,8 @@ class CalendarFetcher {
             return
         }
         
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
         DispatchQueue.global().async {
             let jiDoc = Ji(htmlURL: URL(string: "http://qiita.com/" + category.url)!)
             if let bodyNode = jiDoc?.xPath("//body")!.first {
@@ -34,6 +36,7 @@ class CalendarFetcher {
                     }
                     category.calendars.append(calendar)
                 }
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 completion()
             }
         }

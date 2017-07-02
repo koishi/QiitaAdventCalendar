@@ -38,6 +38,7 @@ struct YearFetcher {
     static func scrapingYearItems(completion:@escaping (_ years: [YearEntity]) -> Void) {
         
         var years = [YearEntity]()
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         DispatchQueue.global().async {
             let jiDoc = Ji(htmlURL: URL(string: "http://qiita.com/advent-calendar")!)
@@ -70,6 +71,7 @@ struct YearFetcher {
                 }
                 years.append(item)
             }
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             completion(years)
         }
     }

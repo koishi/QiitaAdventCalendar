@@ -17,7 +17,9 @@ class EntryFetcher {
             completion()
             return
         }
-        
+
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+
         DispatchQueue.global().async {
             let jiDoc = Ji(htmlURL: URL(string: "http://qiita.com/" + calendar.url)!)
             if let bodyNode = jiDoc?.xPath("//body")!.first {
@@ -62,6 +64,7 @@ class EntryFetcher {
                     }
                     calendar.items.append(item)
                 }
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 completion()
             }
         }

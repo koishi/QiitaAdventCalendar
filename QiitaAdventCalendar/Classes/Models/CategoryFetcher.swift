@@ -13,6 +13,8 @@ class CategoryFetcher {
 
   static func scrapingCategories(_ year: YearEntity, completion: @escaping (_ categories: [CategoryEntity]) -> Void) {
 
+    UIApplication.shared.isNetworkActivityIndicatorVisible = true
+
     DispatchQueue.global().async {
         var categories = [CategoryEntity]()
         let jiDoc = Ji(htmlURL: URL(string: "http://qiita.com/advent-calendar/\(year.year)/categories")!)
@@ -30,6 +32,7 @@ class CategoryFetcher {
                 categories.append(category)
             }
         }
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
         completion(categories)
     }
 
