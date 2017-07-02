@@ -29,7 +29,7 @@ class CalendarManagerTests: XCTestCase {
     })
     waitForExpectations(timeout: 30.0, handler:nil)
     print(category.calendars)
-    XCTAssertEqual(category.calendars.count, 24)
+    XCTAssertEqual(category.calendars.count, 23)
   }
 
   func testScrapingCalendars_company() {
@@ -50,7 +50,7 @@ class CalendarManagerTests: XCTestCase {
     
     let category = CategoryEntity()
     category.url = "advent-calendar/2014"
-    category.year = .EarlyYear
+    category.year = .earlyYear
     CalendarManager.scrapingCalendars(category, completion: {
       expectation.fulfill()
     })
@@ -64,7 +64,7 @@ class CalendarManagerTests: XCTestCase {
     
     let category = CategoryEntity()
     category.url = "advent-calendar/2013"
-    category.year = .EarlyYear
+    category.year = .earlyYear
     CalendarManager.scrapingCalendars(category, completion: {
       expectation.fulfill()
     })
@@ -78,7 +78,7 @@ class CalendarManagerTests: XCTestCase {
     
     let category = CategoryEntity()
     category.url = "advent-calendar/2012"
-    category.year = .EarlyYear
+    category.year = .earlyYear
     CalendarManager.scrapingCalendars(category, completion: {
       expectation.fulfill()
     })
@@ -92,7 +92,7 @@ class CalendarManagerTests: XCTestCase {
     
     let category = CategoryEntity()
     category.url = "advent-calendar/2011"
-    category.year = .EarlyYear
+    category.year = .earlyYear
     CalendarManager.scrapingCalendars(category, completion: {
       expectation.fulfill()
     })

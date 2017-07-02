@@ -22,12 +22,15 @@ class CategoryManagerTests: XCTestCase {
   func testScrapingCategories() {
     let expectation = self.expectation(description: "scrapingCategories request")
     
-    CategoryManager.sharedInstance.scrapingCategories({
-      print(CategoryManager.sharedInstance.categories)
-      expectation.fulfill()
-    })
+    var categories = [CategoryEntity]()
+    CategoryManager.scrapingCategories("2016") { category in
+        categories = category
+        print(categories)
+        expectation.fulfill()
+    }
+
     waitForExpectations(timeout: 30.0, handler:nil)
-    XCTAssertEqual(CategoryManager.sharedInstance.categories.count, 14)
+    XCTAssertEqual(categories.count, 14)
   }
 
 }
