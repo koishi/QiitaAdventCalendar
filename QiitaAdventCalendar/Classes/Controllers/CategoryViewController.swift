@@ -14,7 +14,7 @@ class CategoryViewController: UIViewController {
     
     fileprivate let cellIdentifier = "Cell"
     
-    var year: String?
+    var year: YearManager.year?
     
     var categories = [CategoryEntity]()
     
@@ -23,13 +23,17 @@ class CategoryViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-        navigationItem.title = year
+        navigationItem.title = year?.string()
         
         guard self.categories.count == 0 else {
             return
         }
         
-        CategoryFetcher.scrapingCategories(year!) {
+        guard let year = year else {
+            return
+        }
+
+        CategoryFetcher.scrapingCategories(year) {
             categories in
             self.categories = categories
             DispatchQueue.main.async { [weak self] in

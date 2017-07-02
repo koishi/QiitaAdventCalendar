@@ -32,7 +32,7 @@ extension YearSelectViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
-        cell.textLabel?.text = YearManager.years[indexPath.row]
+        cell.textLabel?.text = YearManager.years[indexPath.row].string()
         return cell
     }
     
@@ -45,7 +45,7 @@ extension YearSelectViewController: UITableViewDataSource {
 extension YearSelectViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = YearManager.rootViewController(YearManager.years[indexPath.row])
+        let vc = YearManager.years[indexPath.row].rootViewController()
         navigationController?.pushViewController(vc, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
