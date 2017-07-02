@@ -61,17 +61,8 @@ struct YearFetcher {
                             item.year = content
                         }
                     case "col-sm-2":
-                        if let content = node.xPath("dl/dt").first?.content {
-                            switch content {
-                            case "Calendars":
-                                item.count_calendars = content
-                            case "Participants":
-                                item.count_participants = content
-                            case "Likes":
-                                item.count_likes = content
-                            default:
-                                break
-                            }
+                        if let content = node.xPath("dl/dt").first?.content, let value = node.xPath("dl/dd").first?.content {
+                            item.countItems.append((content, value))
                         }
                     default:
                         break

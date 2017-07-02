@@ -29,6 +29,8 @@
 		437705A01C2F927C00E32781 /* YearSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377059F1C2F927C00E32781 /* YearSelectViewController.swift */; };
 		437705A21C2F961600E32781 /* YearFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437705A11C2F961600E32781 /* YearFetcher.swift */; };
 		661898533B540A1E76C9BAF0 /* Pods_QiitaAdventCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D090C8D7C27D9EA9B4592CE /* Pods_QiitaAdventCalendar.framework */; };
+		8230976B1F08CAC60081E16A /* YearListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823097691F08CAC60081E16A /* YearListTableViewCell.swift */; };
+		8230976C1F08CAC60081E16A /* YearListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8230976A1F08CAC60081E16A /* YearListTableViewCell.xib */; };
 		82EA6C0D1F0894A8008A5DA7 /* YearManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EA6C0C1F0894A8008A5DA7 /* YearManagerTests.swift */; };
 		82EA6C111F08A425008A5DA7 /* YearEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EA6C101F08A425008A5DA7 /* YearEntity.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +74,8 @@
 		437705A11C2F961600E32781 /* YearFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YearFetcher.swift; path = Classes/Models/YearFetcher.swift; sourceTree = "<group>"; };
 		6020B45FC55183EE8B406840 /* Pods-QiitaAdventCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaAdventCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-QiitaAdventCalendar/Pods-QiitaAdventCalendar.release.xcconfig"; sourceTree = "<group>"; };
 		6D090C8D7C27D9EA9B4592CE /* Pods_QiitaAdventCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaAdventCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		823097691F08CAC60081E16A /* YearListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YearListTableViewCell.swift; path = Classes/Views/YearListTableViewCell.swift; sourceTree = "<group>"; };
+		8230976A1F08CAC60081E16A /* YearListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YearListTableViewCell.xib; path = Classes/Views/YearListTableViewCell.xib; sourceTree = "<group>"; };
 		82EA6C0C1F0894A8008A5DA7 /* YearManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearManagerTests.swift; sourceTree = "<group>"; };
 		82EA6C101F08A425008A5DA7 /* YearEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YearEntity.swift; path = Classes/Models/Entities/YearEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +168,8 @@
 				4354B15B1C2EB0D800A6E1C2 /* LaunchScreen.storyboard */,
 				4305512E1C2FE88300F4B065 /* EntryListTableViewCell.swift */,
 				4305512F1C2FE88300F4B065 /* EntryListTableViewCell.xib */,
+				823097691F08CAC60081E16A /* YearListTableViewCell.swift */,
+				8230976A1F08CAC60081E16A /* YearListTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				430551311C2FE88300F4B065 /* EntryListTableViewCell.xib in Resources */,
+				8230976C1F08CAC60081E16A /* YearListTableViewCell.xib in Resources */,
 				4354B15D1C2EB0D800A6E1C2 /* LaunchScreen.storyboard in Resources */,
 				4354B15A1C2EB0D800A6E1C2 /* Assets.xcassets in Resources */,
 				4354B1581C2EB0D800A6E1C2 /* Main.storyboard in Resources */,
@@ -373,6 +380,7 @@
 				82EA6C111F08A425008A5DA7 /* YearEntity.swift in Sources */,
 				437705941C2EEC3000E32781 /* EntryFetcher.swift in Sources */,
 				4377059E1C2F14E200E32781 /* EntryWebViewController.swift in Sources */,
+				8230976B1F08CAC60081E16A /* YearListTableViewCell.swift in Sources */,
 				437705761C2EB5F700E32781 /* CategoryEntity.swift in Sources */,
 				430551301C2FE88300F4B065 /* EntryListTableViewCell.swift in Sources */,
 				437705A21C2F961600E32781 /* YearFetcher.swift in Sources */,

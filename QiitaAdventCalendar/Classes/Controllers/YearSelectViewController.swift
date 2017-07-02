@@ -20,6 +20,10 @@ class YearSelectViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let nib = UINib(nibName: YearListTableViewCell.cellIdentifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: YearListTableViewCell.cellIdentifier)
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         navigationItem.title = "Qiita Advent Calendar"
         
@@ -41,8 +45,8 @@ class YearSelectViewController: UIViewController {
 extension YearSelectViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
-        cell.textLabel?.text = years[indexPath.row].year
+        let cell = tableView.dequeueReusableCell(withIdentifier: YearListTableViewCell.cellIdentifier) as! YearListTableViewCell
+        cell.yearEntity = years[indexPath.row]
         return cell
     }
     
@@ -60,6 +64,10 @@ extension YearSelectViewController: UITableViewDelegate {
         }
         navigationController?.pushViewController(vc, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 115
     }
     
 }

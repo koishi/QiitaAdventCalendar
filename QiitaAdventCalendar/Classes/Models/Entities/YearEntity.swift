@@ -10,7 +10,6 @@ import Foundation
 
 struct YearEntity {
     var year = ""
-    var count_calendars = ""
-    var count_participants = ""
-    var count_likes = ""
+    typealias countItem = (content: String, value: String)
+    var countItems: [countItem] = []
 }
