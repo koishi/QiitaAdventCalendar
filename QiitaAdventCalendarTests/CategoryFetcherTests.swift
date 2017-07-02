@@ -22,8 +22,10 @@ class CategoryFetcherTests: XCTestCase {
   func testScrapingCategories() {
     let expectation = self.expectation(description: "scrapingCategories request")
     
+    var yearEntity = YearEntity()
+    yearEntity.year = "2016"
     var categories = [CategoryEntity]()
-    CategoryFetcher.scrapingCategories("2016") { category in
+    CategoryFetcher.scrapingCategories(yearEntity) { category in
         categories = category
         print(categories)
         expectation.fulfill()
