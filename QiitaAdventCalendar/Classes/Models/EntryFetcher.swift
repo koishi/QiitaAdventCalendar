@@ -1,5 +1,5 @@
 //
-//  EntryManager.swift
+//  EntryFetcher.swift
 //  QiitaAdventCalendar
 //
 //  Created by bs on 2015/12/27.
@@ -9,7 +9,7 @@
 import Foundation
 import Ji
 
-class EntryManager: NSObject {
+class EntryFetcher {
     
     static func scrapingCalendarItems(_ calendar: CalendarEntity, completion:@escaping () -> Void) {
         

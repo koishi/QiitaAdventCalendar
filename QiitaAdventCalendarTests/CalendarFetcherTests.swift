@@ -1,5 +1,5 @@
 //
-//  CalendarManagerTests.swift
+//  CalendarFetcherTests.swift
 //  QiitaAdventCalendar
 //
 //  Created by bs on 2015/12/26.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import QiitaAdventCalendar
 
-class CalendarManagerTests: XCTestCase {
+class CalendarFetcherTests: XCTestCase {
 
   override func setUp() {
     super.setUp()
@@ -24,7 +24,7 @@ class CalendarManagerTests: XCTestCase {
 
     let category = CategoryEntity()
     category.url = "advent-calendar/2015/categories/to_be_decided"
-    CalendarManager.scrapingCalendars(category, completion: {
+    CalendarFetcher.scrapingCalendars(category, completion: {
       expectation.fulfill()
     })
     waitForExpectations(timeout: 30.0, handler:nil)
@@ -37,7 +37,7 @@ class CalendarManagerTests: XCTestCase {
     
     let category = CategoryEntity()
     category.url = "advent-calendar/2015/categories/company"
-    CalendarManager.scrapingCalendars(category, completion: {
+    CalendarFetcher.scrapingCalendars(category, completion: {
       expectation.fulfill()
     })
     waitForExpectations(timeout: 30.0, handler:nil)
@@ -51,7 +51,7 @@ class CalendarManagerTests: XCTestCase {
     let category = CategoryEntity()
     category.url = "advent-calendar/2014"
     category.year = .earlyYear
-    CalendarManager.scrapingCalendars(category, completion: {
+    CalendarFetcher.scrapingCalendars(category, completion: {
       expectation.fulfill()
     })
     waitForExpectations(timeout: 30.0, handler:nil)
@@ -65,7 +65,7 @@ class CalendarManagerTests: XCTestCase {
     let category = CategoryEntity()
     category.url = "advent-calendar/2013"
     category.year = .earlyYear
-    CalendarManager.scrapingCalendars(category, completion: {
+    CalendarFetcher.scrapingCalendars(category, completion: {
       expectation.fulfill()
     })
     waitForExpectations(timeout: 30.0, handler:nil)
@@ -79,7 +79,7 @@ class CalendarManagerTests: XCTestCase {
     let category = CategoryEntity()
     category.url = "advent-calendar/2012"
     category.year = .earlyYear
-    CalendarManager.scrapingCalendars(category, completion: {
+    CalendarFetcher.scrapingCalendars(category, completion: {
       expectation.fulfill()
     })
     waitForExpectations(timeout: 30.0, handler:nil)
@@ -93,7 +93,7 @@ class CalendarManagerTests: XCTestCase {
     let category = CategoryEntity()
     category.url = "advent-calendar/2011"
     category.year = .earlyYear
-    CalendarManager.scrapingCalendars(category, completion: {
+    CalendarFetcher.scrapingCalendars(category, completion: {
       expectation.fulfill()
     })
     waitForExpectations(timeout: 30.0, handler:nil)

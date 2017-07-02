@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CalendarEntity: NSObject {
+class CalendarEntity {
     var title = ""
     var url = ""
     var items = [EntryEntity]()

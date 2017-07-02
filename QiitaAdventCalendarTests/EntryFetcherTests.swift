@@ -1,5 +1,5 @@
 //
-//  EntryManagerTests.swift
+//  EntryFetcherTests.swift
 //  QiitaAdventCalendar
 //
 //  Created by bs on 2015/12/27.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import QiitaAdventCalendar
 
-class EntryManagerTests: XCTestCase {
+class EntryFetcherTests: XCTestCase {
   
   override func setUp() {
     super.setUp()
@@ -25,7 +25,7 @@ class EntryManagerTests: XCTestCase {
     let calendar = CalendarEntity()
     calendar.url = "advent-calendar/2015/ios-2"
     
-    EntryManager.scrapingCalendarItems(calendar, completion: {
+    EntryFetcher.scrapingCalendarItems(calendar, completion: {
       expectation.fulfill()
     })
     waitForExpectations(timeout: 30.0, handler:nil)

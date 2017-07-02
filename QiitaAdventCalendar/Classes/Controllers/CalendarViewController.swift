@@ -25,7 +25,7 @@ class CalendarViewController: UIViewController {
         navigationItem.title = category.title
         
         // カテゴリ内のアドベントカレンダーの読込
-        CalendarManager.scrapingCalendars(category) {
+        CalendarFetcher.scrapingCalendars(category) {
             DispatchQueue.main.async { [weak self] in
                 self?.tableView.reloadData()
             }

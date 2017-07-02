@@ -1,5 +1,5 @@
 //
-//  CategoryManager.swift
+//  CategoryFetcher.swift
 //  QiitaAdventCalendar
 //
 //  Created by bs on 2015/12/26.
@@ -9,7 +9,7 @@
 import Foundation
 import Ji
 
-class CategoryManager: NSObject {
+class CategoryFetcher {
 
   static func scrapingCategories(_ year:String, completion: @escaping (_ categories: [CategoryEntity]) -> Void) {
 

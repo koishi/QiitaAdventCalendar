@@ -27,7 +27,7 @@ class EntryListViewController: UIViewController {
         
         navigationItem.title = calendar.title
         
-        EntryManager.scrapingCalendarItems(calendar) {
+        EntryFetcher.scrapingCalendarItems(calendar) {
             DispatchQueue.main.async { [weak self] in
                 self?.tableView.reloadData()
             }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class YearManager: NSObject {
+class YearManager {
     
     static let years = ["2016", "2015", "2014", "2013", "2012", "2011"]
     

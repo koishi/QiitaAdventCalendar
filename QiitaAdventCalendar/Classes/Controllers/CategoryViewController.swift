@@ -29,7 +29,7 @@ class CategoryViewController: UIViewController {
             return
         }
         
-        CategoryManager.scrapingCategories(year!) {
+        CategoryFetcher.scrapingCategories(year!) {
             categories in
             self.categories = categories
             DispatchQueue.main.async { [weak self] in

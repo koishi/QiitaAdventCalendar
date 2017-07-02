@@ -1,5 +1,5 @@
 //
-//  CategoryManagerTests.swift
+//  CategoryFetcherTests.swift
 //  QiitaAdventCalendar
 //
 //  Created by bs on 2015/12/26.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import QiitaAdventCalendar
 
-class CategoryManagerTests: XCTestCase {
+class CategoryFetcherTests: XCTestCase {
   
   override func setUp() {
     super.setUp()
@@ -23,7 +23,7 @@ class CategoryManagerTests: XCTestCase {
     let expectation = self.expectation(description: "scrapingCategories request")
     
     var categories = [CategoryEntity]()
-    CategoryManager.scrapingCategories("2016") { category in
+    CategoryFetcher.scrapingCategories("2016") { category in
         categories = category
         print(categories)
         expectation.fulfill()

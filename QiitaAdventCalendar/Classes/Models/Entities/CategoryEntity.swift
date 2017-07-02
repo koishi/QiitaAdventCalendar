@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CategoryEntity: NSObject {
+class CategoryEntity {
     var title = ""
     var url = ""
     var calendars = [CalendarEntity]()

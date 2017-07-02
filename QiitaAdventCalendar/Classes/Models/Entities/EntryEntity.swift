@@ -8,7 +8,7 @@
 
 import Foundation
 
-class EntryEntity: NSObject {
+class EntryEntity {
     var date = ""
     var authorName = ""
     var authorURL = ""
