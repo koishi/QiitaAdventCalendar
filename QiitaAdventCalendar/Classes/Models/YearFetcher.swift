@@ -71,7 +71,9 @@ struct YearFetcher {
                 }
                 years.append(item)
             }
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            DispatchQueue.main.async {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            }
             completion(years)
         }
     }

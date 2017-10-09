@@ -36,7 +36,9 @@ class CalendarFetcher {
                     }
                     category.calendars.append(calendar)
                 }
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                DispatchQueue.main.async {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                }
                 completion()
             }
         }

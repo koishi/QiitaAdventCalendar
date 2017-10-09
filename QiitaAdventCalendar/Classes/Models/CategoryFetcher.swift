@@ -32,7 +32,9 @@ class CategoryFetcher {
                 categories.append(category)
             }
         }
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        DispatchQueue.main.async {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        }
         completion(categories)
     }
 
