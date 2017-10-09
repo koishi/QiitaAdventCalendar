@@ -32,3 +32,6 @@ Podfile.lock
 *.xcworkspace/*
 !*.xcworkspace/contents.xcworkspacedata
 xcuserdata
+
+# Bundler
+.Bundle

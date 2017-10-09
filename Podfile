@@ -4,6 +4,6 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'QiitaAdventCalendar' do
-  pod 'Ji', '~> 2.0'
-  pod 'Kingfisher', '~> 3.0'
+  pod 'Ji', '~> 2'
+  pod 'Kingfisher', '~> 3'
 end
