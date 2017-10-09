@@ -21,7 +21,7 @@ class EntryFetcher {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
 
         DispatchQueue.global().async {
-            let jiDoc = Ji(htmlURL: URL(string: "http://qiita.com/" + calendar.url)!)
+            let jiDoc = Ji(htmlURL: URL(string: "https://qiita.com/" + calendar.url)!)
             if let bodyNode = jiDoc?.xPath("//body")!.first {
                 
                 let contentDivNode = bodyNode.xPath("div[@id='main']/div[@class='adventCalendarSection']/div[@class='container']/div[@class='col-xm-12']/div[@class='adventCalendarItem']")

@@ -41,7 +41,7 @@ struct YearFetcher {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         DispatchQueue.global().async {
-            let jiDoc = Ji(htmlURL: URL(string: "http://qiita.com/advent-calendar")!)
+            let jiDoc = Ji(htmlURL: URL(string: "https://qiita.com/advent-calendar")!)
             guard let bodyNode = jiDoc?.xPath("//body")!.first else {
                 return
             }
