@@ -14,32 +14,27 @@ class YearListTableViewCell: UITableViewCell {
 
     var yearEntity: YearEntity? {
         didSet {
-            year.text = yearEntity?.year
-            
-            if let countItem = yearEntity?.countItems[0] {
-                content1.text = countItem.content
-                value1.text = countItem.value
+            guard let yearEntity = yearEntity else {
+                return
             }
-            
-            if let countItem = yearEntity?.countItems[1] {
-                content2.text = countItem.content
-                value2.text = countItem.value
+            year.text = yearEntity.year
+
+            let contents: [UILabel] = [content1, content2]
+            let values: [UILabel] = [value1, value2]
+
+            for (index, countItem) in yearEntity.countItems.enumerated() {
+                contents[index].text = countItem.content
+                values[index].text = countItem.value
             }
 
-            if let countItem = yearEntity?.countItems[2] {
-                content3.text = countItem.content
-                value3.text = countItem.value
-            }
         }
     }
 
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var content1: UILabel!
     @IBOutlet weak var content2: UILabel!
-    @IBOutlet weak var content3: UILabel!
     @IBOutlet weak var value1: UILabel!
     @IBOutlet weak var value2: UILabel!
-    @IBOutlet weak var value3: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

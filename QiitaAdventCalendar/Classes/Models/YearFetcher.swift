@@ -46,7 +46,7 @@ struct YearFetcher {
                 return
             }
             
-            let contentDivNode = bodyNode.xPath("div[@id='main']/div[@class='adventCalendarYearList']/div[@class='container']/div[@class='row adventCalendarYearList_element']")
+            let contentDivNode = bodyNode.xPath("div[@id='main']/div[@class='adventCalendarSection']/div[@class='adventCalendarYearList']/div[@class='container']/div[@class='row adventCalendarYearList_element']")
             
             for childNode in contentDivNode {
                 
@@ -57,7 +57,7 @@ struct YearFetcher {
                 
                 for node in spanNode {
                     switch node.attributes["class"]! {
-                    case "adventCalendarYearList_heading col-sm-6":
+                    case "adventCalendarYearList_heading col-sm-8":
                         if let content = node.content {
                             item.year = content
                         }

@@ -31,7 +31,7 @@ class YearManagerTests: XCTestCase {
         }
 
         waitForExpectations(timeout: 30.0, handler:nil)
-        XCTAssertEqual(years.count, 6)
+        XCTAssertEqual(years.count, 7)
     }
 
 }
