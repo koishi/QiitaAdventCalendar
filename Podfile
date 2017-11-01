@@ -5,5 +5,5 @@ use_frameworks!
 
 target 'QiitaAdventCalendar' do
   pod 'Ji', '~> 2'
-  pod 'Kingfisher', '~> 3'
+  pod 'Kingfisher', '~> 4'
 end
