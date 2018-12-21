@@ -1,0 +1,7 @@
+git_url("https://github.com/koishi/ios_certificates.git")
+
+type("development") # The default type, can be: appstore, adhoc, enterprise or development
+
+app_identifier(["cc.jugem.mego.QiitaAdventCalendar"])
+
+username("bs@v7.com") # Your Apple Developer Portal username

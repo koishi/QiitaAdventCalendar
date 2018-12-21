@@ -1,0 +1,46 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+  desc "Description of what the lane does"
+  lane :match_dev do
+    match(app_identifier: ["cc.jugem.mego.QiitaAdventCalendar"], type: "development")
+  end
+
+  desc "Description of what the lane does"
+  lane :match_appstore do
+    match(app_identifier: ["cc.jugem.mego.QiitaAdventCalendar"], type: "appstore")
+  end
+
+  lane :upload_appstore do
+    xcode_select "/Applications/Xcode941.app"
+    sigh(force: false)
+    match(app_identifier: ["cc.jugem.mego.QiitaAdventCalendar"], type: "appstore")
+    gym(scheme: "AmeshEx", configuration: "Release")
+    deliver(force: true)
+  end
+
+  desc "TestFlight"
+  lane :beta do
+    setup_circle_ci
+    match(type: "appstore")
+    gym(scheme: "cc.jugem.mego.QiitaAdventCalendar", configuration: "Release")
+    upload_to_testflight
+  end
+
+end
