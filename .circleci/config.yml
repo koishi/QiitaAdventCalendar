@@ -63,7 +63,7 @@ jobs:
       - <<: *restore_bundler_cache
       - <<: *bundle_install
       - <<: *save_bundler_cache
-      # - run: bundle exec fastlane beta
+      - run: bundle exec fastlane beta
 
 workflows:
   version: 2
