@@ -63,7 +63,10 @@ jobs:
       - <<: *restore_bundler_cache
       - <<: *bundle_install
       - <<: *save_bundler_cache
-      - run: bundle exec fastlane beta
+      - <<: *restore_cocoapods_cache
+      - <<: *pod_install
+      - <<: *save_cocoapods_cache
+      # - run: bundle exec fastlane beta
 
 workflows:
   version: 2
