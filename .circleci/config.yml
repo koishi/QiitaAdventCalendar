@@ -1,0 +1,75 @@
+version: 2
+
+references:
+  base: &base
+    macos:
+      xcode: "9.4.1"
+    environment:
+      LC_ALL: en_US.UTF-8
+      LANG: en_US.UTF-8
+      XCODE_PATH: /Applications/Xcode.app
+      FASTLANE_SKIP_UPDATE_CHECK: 1
+
+  steps:
+    restore_bundler_cache: &restore_bundler_cache
+      restore_cache:
+        key: 1-bundler-{{ checksum "Gemfile.lock" }}
+
+    save_bundler_cache: &save_bundler_cache
+      save_cache:
+        key: 1-bundler-{{ checksum "Gemfile.lock" }}
+        paths:
+          - Vendor/bundler
+
+    restore_cocoapods_cache: &restore_cocoapods_cache
+      restore_cache:
+        key: v1-pods-{{ checksum "Podfile.lock" }}
+
+    save_cocoapods_cache: &save_cocoapods_cache
+      save_cache:
+        key: v1-pods-{{ checksum "Podfile.lock" }}
+        paths:
+          - Pods
+
+    store_build_artifacts: &store_build_artifacts
+      store_artifacts:
+        path: build
+        destination: build
+
+    store_gym_logs: &store_gym_logs
+      store_artifacts:
+        path: ~/Library/Logs/gym
+        destination: logs/gym
+
+    bundle_install: &bundle_install
+      run: bundle install --path Vendor/bundler
+
+    pod_install: &pod_install
+      run:
+        name: Install CocoaPods
+        command: |
+          curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+          bundle exec pod install
+
+    attach_build_workspace: &attach_build_workspace
+      attach_workspace:
+        at: build
+
+jobs:
+  beta_build:
+    <<: *base
+    steps:
+      - checkout
+      - <<: *restore_bundler_cache
+      - <<: *bundle_install
+      - <<: *save_bundler_cache
+      # - run: bundle exec fastlane beta
+
+workflows:
+  version: 2
+  app:
+    jobs:
+      - beta_build:
+          filters:
+            branches:
+              only: [develop_ci]
