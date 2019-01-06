@@ -42,4 +42,4 @@ workflows:
           target: beta
           filters:
             branches:
-              only: [develop_ci]
+              only: [master, develop_ci]
