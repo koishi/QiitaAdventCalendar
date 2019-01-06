@@ -73,9 +73,15 @@ jobs:
           keys:
             - pods-{{ checksum "Podfile.lock" }}
 
-      - run: |
-          cur l https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-          bundle exec pod install
+      - run:
+            name: pod install
+            command: |
+              curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+              bundle exec pod install
+
+      # - run: |
+      #     cur l https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+      #     bundle exec pod install
 
       - save_cache:
           key: pods-{{ checksum "Podfile.lock" }}
