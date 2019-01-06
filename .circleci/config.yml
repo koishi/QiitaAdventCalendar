@@ -2,63 +2,28 @@ version: 2.1
 
 orbs:
   fastlane: ngs/fastlane@0.0.2
-  # cocopods:
-  #   commands:
-  #     setup:
-  #       steps:
-  #         - restore_cache:
-  #           key: v1-pods-{{ checksum "Podfile.lock" }}
-  #         - pod_install:
-  #           command:  |
-  #             curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-  #             bundle exec pod install
-  #         - save_cache:
-  #           key: v1-pods-{{ checksum "Podfile.lock" }}
-  #           paths: [Pods]
 
 commands:
   setup:
     steps:
       - checkout
       - fastlane/bundle-install
-
-      # - restore_cache:
-      #   key: v1-pods-{{ checksum "Podfile.lock" }}
-      # - run: |
-      #     curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-      #     bundle exec pod install
-      # - pod_install:
-      #   command:  |
-      #     curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-      #     bundle exec pod install
-      # - save_cache:
-      #   key: v1-pods-{{ checksum "Podfile.lock" }}
-      #   paths: [Pods]
-
-  # pod-install:
-  #   steps:
-  #     - restore_cache:
-  #       key: 'v1-pods-{{ checksum "Podfile.lock" }}'
-  #     - run: |
-  #         cur l https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-  #         bundle exec pod install
-      # - save_cache:
-      #   key: v1-pods-{{ checksum "Podfile.lock" }}
-      #   paths: [Pods]
+  pod_setup:
+    steps:
+      - restore_cache:
+          keys:
+            - pods-{{ checksum "Podfile.lock" }}
+      - run:
+            name: pod install
+            command: |
+              curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+              bundle exec pod install
+      - save_cache:
+          key: pods-{{ checksum "Podfile.lock" }}
+          paths:
+            - Pods
 
 jobs:
-
-  # pod-install:
-    # executor: fastlane/macos
-    # steps:
-    #   - restore_cache:
-    #     key: v1-pods-{{ checksum "Podfile.lock" }}
-    #   - run: |
-    #       curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-    #       bundle exec pod install
-    #   - save_cache:
-    #     key: v1-pods-{{ checksum "Podfile.lock" }}
-        # paths: [Pods]
 
   build:
     executor: fastlane/macos
@@ -68,36 +33,7 @@ jobs:
         enum: [beta, release]
     steps:
       - setup
-
-      - restore_cache:
-          keys:
-            - pods-{{ checksum "Podfile.lock" }}
-
-      - run:
-            name: pod install
-            command: |
-              curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-              bundle exec pod install
-
-      # - run: |
-      #     cur l https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-      #     bundle exec pod install
-
-      - save_cache:
-          key: pods-{{ checksum "Podfile.lock" }}
-          paths:
-            - Pods
-
-
-      # - run:
-      #   name: test
-      #   command: |
-      #     cur l https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-      #     bundle exec pod install
-
-      # - save_cache:
-      #   key: v1-pods-{{ checksum "Podfile.lock" }}
-      #   paths: [Pods]
+      - pod_setup
 
 workflows:
   app:
