@@ -14,7 +14,6 @@ commands:
       - restore_cache:
           keys:
             - v1-pods-{{ checksum "Podfile.lock" }}
-          path: Pods
       - run:
             name: pod install
             command: |
