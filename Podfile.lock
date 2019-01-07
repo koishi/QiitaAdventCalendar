@@ -1,12 +1,19 @@
 PODS:
+  - Ji (2.1.0):
+    - Ji/Ji (= 2.1.0)
+  - Ji/Ji (2.1.0):
+    - Ji/Ji-libxml
+  - Ji/Ji-libxml (2.1.0)
   - Kingfisher (4.2.0)
 
 DEPENDENCIES:
+  - Ji (~> 2)
   - Kingfisher (~> 4)
 
 SPEC CHECKSUMS:
+  Ji: 21946da4e13425485ddd424edfaeeced0d80ad28
   Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
 
-PODFILE CHECKSUM: 9fd9a243b85ace6d8936085f0f484d77f0340e0e
+PODFILE CHECKSUM: 142ee51d2020589ab352f00d77f6b44a3482f5d3
 
 COCOAPODS: 1.3.1
