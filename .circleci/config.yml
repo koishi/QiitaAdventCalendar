@@ -14,9 +14,9 @@ commands:
       - restore_cache:
           keys:
             - v1-pods-{{ checksum "Podfile.lock" }}
+          path: Pods
       - run:
             name: pod install
-            working_directory: Pods
             command: |
               curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
               bundle exec pod install
