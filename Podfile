@@ -5,6 +5,6 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'QiitaAdventCalendar' do
-  pod 'Ji', '~> 2'
+  # pod 'Ji', '~> 2'
   pod 'Kingfisher', '~> 4'
 end
