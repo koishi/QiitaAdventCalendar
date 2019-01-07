@@ -26,7 +26,6 @@ Thumbs.db
 
 #CocoaPod
 Pods/*
-Podfile.lock
 
 # Xcode Workspace
 *.xcworkspace/*
