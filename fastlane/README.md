@@ -16,11 +16,6 @@ or alternatively using `brew cask install fastlane`
 
 # Available Actions
 ## iOS
-### ios custom_lane
-```
-fastlane ios custom_lane
-```
-Description of what the lane does
 ### ios match_dev
 ```
 fastlane ios match_dev
@@ -31,6 +26,16 @@ Description of what the lane does
 fastlane ios match_appstore
 ```
 Description of what the lane does
+### ios upload_appstore
+```
+fastlane ios upload_appstore
+```
+
+### ios beta
+```
+fastlane ios beta
+```
+TestFlight
 
 ----
 
