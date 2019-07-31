@@ -229,7 +229,6 @@
 				4354B14C1C2EB0D800A6E1C2 /* Frameworks */,
 				4354B14D1C2EB0D800A6E1C2 /* Resources */,
 				993957063AA62337DC99CBDB /* [CP] Embed Pods Frameworks */,
-				06E7A9803A357810B841FDE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -325,21 +324,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06E7A9803A357810B841FDE7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QiitaAdventCalendar/Pods-QiitaAdventCalendar-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		37739967A27E023D91D96B46 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -364,7 +348,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-QiitaAdventCalendar/Pods-QiitaAdventCalendar-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-QiitaAdventCalendar/Pods-QiitaAdventCalendar-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Ji/Ji.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
@@ -375,7 +359,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QiitaAdventCalendar/Pods-QiitaAdventCalendar-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QiitaAdventCalendar/Pods-QiitaAdventCalendar-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
