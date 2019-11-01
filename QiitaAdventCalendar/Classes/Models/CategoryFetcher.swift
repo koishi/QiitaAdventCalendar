@@ -19,7 +19,8 @@ class CategoryFetcher {
         var categories = [CategoryEntity]()
         let jiDoc = Ji(htmlURL: URL(string: "https://qiita.com/advent-calendar/\(year.year)/categories")!)
         if let bodyNode = jiDoc?.xPath("//body")!.first {
-            let contentDivNode = bodyNode.xPath("div[@id='main']/div[@class='container adventCalendarBody']/div[@class='row']/div[@class='col-lg-3 col-md-4 col-sm-6']/div[@class='adventCalendarCard']")
+//            let contentDivNode = bodyNode.xPath("div[@class='allWrapper']/div[@class='p-adcal']/div[@class='p-adcal_container']/div[@class='p-adcal_main']/div[@class='ac-CategoryCardWrapper']/div")
+            let contentDivNode = bodyNode.xPath("div[@class='allWrapper']/div[@class='p-adcal']")
             for childNode in contentDivNode {
                 
                 let category = CategoryEntity()
