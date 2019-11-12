@@ -21,13 +21,13 @@ class CalendarFetcher {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         DispatchQueue.global().async {
-            let jiDoc = Ji(htmlURL: URL(string: "https://qiita.com/" + category.url)!)
+            let jiDoc = Ji(htmlURL: URL(string: "https://qiita.com" + category.url)!)
             if let bodyNode = jiDoc?.xPath("//body")!.first {
                 
                 let contentDivNode = bodyNode.xPath(category.year.xPath())
                 for childNode in contentDivNode {
                     let calendar = CalendarEntity()
-                    let spanNode = childNode.firstChildWithName("td")?.childrenWithName("a")
+                    let spanNode = childNode.firstChildWithName("div")?.childrenWithName("a")
                     if let title = spanNode?.first?.content {
                         calendar.title = title
                     }

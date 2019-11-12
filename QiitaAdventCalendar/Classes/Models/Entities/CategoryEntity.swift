@@ -23,7 +23,7 @@ class CategoryEntity {
         func xPath() -> String {
             switch self {
             case .lateYear:
-                return "div[@id='main']/div[@class='container adventCalendarBody']/div[@class='row']/div[@class='col-sm-12']/div[@class='adventCalendarList']/table[@class='table adventCalendarList']/tbody/tr"
+                return "div[@class='allWrapper']/div[@class='p-adcal']/div[@class='p-adcal_container']/div[@class='p-adcal_main']/div[@class='ac-ItemWrapper']/div[@class='ac-Item']"
             case .earlyYear:
                 return "div[@id='main']/div[@class='container adventCalendarBody']/div[@class='row']/table[@class='table adventCalendarList']/tbody/tr"
             }
