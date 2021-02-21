@@ -14,8 +14,6 @@ class YearSelectViewController: UIViewController {
     
     var years = [YearEntity]()
     
-    fileprivate let cellIdentifier = "Cell"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -23,10 +21,8 @@ class YearSelectViewController: UIViewController {
         
         let nib = UINib(nibName: YearListTableViewCell.cellIdentifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: YearListTableViewCell.cellIdentifier)
-        
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+
         navigationItem.title = "Qiita Advent Calendar"
-        
         
         YearFetcher.scrapingYearItems{ response in
             self.years = response

@@ -142,8 +142,8 @@
 		4377056E1C2EB45A00E32781 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				437705711C2EB4B800E32781 /* Controllers */,
 				4377056F1C2EB4AB00E32781 /* Models */,
+				437705711C2EB4B800E32781 /* ViewControllers */,
 				437705701C2EB4B200E32781 /* Views */,
 			);
 			path = Classes;
@@ -174,7 +174,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		437705711C2EB4B800E32781 /* Controllers */ = {
+		437705711C2EB4B800E32781 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				437705991C2F0B1E00E32781 /* CalendarViewController.swift */,
@@ -183,7 +183,7 @@
 				4377059D1C2F14E200E32781 /* EntryWebViewController.swift */,
 				4377059F1C2F927C00E32781 /* YearSelectViewController.swift */,
 			);
-			path = Controllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		437705721C2EB4D300E32781 /* Entities */ = {
@@ -271,7 +271,7 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 234G69CT2G;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					437705801C2EC03600E32781 = {
 						CreatedOnToolsVersion = 7.2;
@@ -541,15 +541,15 @@
 			baseConfigurationReference = 1362181DA43F7A1979E986A6 /* Pods-QiitaAdventCalendar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 234G69CT2G;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QiitaAdventCalendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.jugem.mego.QiitaAdventCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "ec32d8ca-cc7a-4db1-b9dc-cafd342ea49b";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development cc.jugem.mego.QiitaAdventCalendar";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
