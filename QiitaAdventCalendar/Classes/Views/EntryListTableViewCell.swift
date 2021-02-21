@@ -11,6 +11,22 @@ import UIKit
 class EntryListTableViewCell: UITableViewCell {
     
     static let cellIdentifier = String(describing: EntryListTableViewCell.self)
+
+    var entryEntity: EntryEntity? {
+      didSet {
+        guard let entryEntity = entryEntity else { return }
+
+        date.text = entryEntity.date.replacingOccurrences(of: "12 / ", with: "")
+        if entryEntity.entryTitle.isEmpty {
+            title.text = entryEntity.comment
+        } else {
+            title.text = entryEntity.entryTitle
+        }
+
+        name.text = entryEntity.authorName
+        icon.kf.setImage(with: URL(string: entryEntity.authorIconURL))
+      }
+    }
     
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var title: UILabel!
